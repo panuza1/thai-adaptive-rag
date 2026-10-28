@@ -1,0 +1,79 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/panu/Documents/hackathon/research/src/run.py", line 84, in <module>
+    'setup_seconds':setup_seconds,'data_manifest':json.loads((data_dir/'manifest.json').read_text()),
+  File "/home/panu/Documents/hackathon/research/src/run.py", line 36, in main
+    queries=sorted((q for q in queries if q['split']==cfg['split']),key=lambda q:hashlib.sha256((str(cfg['seed'])+q['id']).encode()).hexdigest())
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/util/decorators.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/sentence_transformer/model.py", line 188, in __init__
+    super().__init__(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/base/model.py", line 222, in __init__
+    modules, self.module_kwargs = self._load_modules(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/base/model.py", line 1023, in _load_modules
+    return self._load_config_modules(model_name_or_path, **load_kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/base/model.py", line 1229, in _load_config_modules
+    module = module_class.load(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/base/modules/transformer.py", line 2130, in load
+    return cls(model_name_or_path=model_name_or_path, **init_kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/util/decorators.py", line 87, in wrapper
+    return func(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/base/modules/transformer.py", line 654, in __init__
+    self.model = self._load_model(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/base/modules/transformer.py", line 1836, in _load_model
+    return model_cls.from_pretrained(model_name_or_path, config=config, **model_kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 411, in from_pretrained
+    return model_class.from_pretrained(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4251, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 673, in _get_resolved_checkpoint_files
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 370, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 537, in cached_files
+    hf_hub_download(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 266, in _inner
+    return fn(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1047, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1285, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 2032, in _download_to_tmp_and_move
+    http_get(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 459, in http_get
+    for chunk in response.iter_bytes(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpx/_models.py", line 897, in iter_bytes
+    for raw_bytes in self.iter_raw():
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpx/_models.py", line 951, in iter_raw
+    for raw_stream_bytes in self.stream:
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpx/_client.py", line 153, in __iter__
+    for chunk in self._stream:
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpx/_transports/default.py", line 127, in __iter__
+    for part in self._httpcore_stream:
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 407, in __iter__
+    raise exc from None
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 403, in __iter__
+    for part in self._stream:
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 342, in __iter__
+    raise exc
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 334, in __iter__
+    for chunk in self._connection._receive_response_body(**kwargs):
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 203, in _receive_response_body
+    event = self._receive_event(timeout=timeout)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_backends/sync.py", line 128, in read
+    return self._sock.recv(max_bytes)
+  File "/usr/lib/python3.10/ssl.py", line 1288, in recv
+    return self.read(buflen)
+  File "/usr/lib/python3.10/ssl.py", line 1161, in read
+    return self._sslobj.read(len)
+KeyboardInterrupt

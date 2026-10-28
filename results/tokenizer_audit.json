@@ -1,0 +1,14 @@
+{
+  "embedding": {
+    "max_document_tokens_without_specials": 268,
+    "max_query_tokens_without_specials": 81,
+    "pair_token_upper_bound": 353,
+    "pair_exceeds_512": false
+  },
+  "reranker": {
+    "max_document_tokens_without_specials": 266,
+    "max_query_tokens_without_specials": 78,
+    "pair_token_upper_bound": 348,
+    "pair_exceeds_512": false
+  }
+}

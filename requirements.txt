@@ -1,0 +1,10 @@
+# CPU torch: install first from https://download.pytorch.org/whl/cpu
+torch==2.14.1
+numpy==2.2.6
+sentence-transformers==5.7.0
+transformers==5.20.2
+huggingface-hub==1.33.0
+pythainlp==5.4.0
+rank-bm25==0.2.2
+matplotlib==3.10.9
+pytest==9.2.0

@@ -1,0 +1,16 @@
+{
+  "source_revision": "644a29c59bac62d5b15b9e9b06c55bba00708eca",
+  "source_sha256": "9ecbc1bdd4bdc43a447c62d46c9ab0874b98c72f5ba9941448c1f78264ca8bda",
+  "source_partition": "train only",
+  "split_protocol": "v2: connected components of identical normalized titles or contexts",
+  "documents": 3223,
+  "queries": 5667,
+  "split_counts": {
+    "development": 3360,
+    "validation": 1133,
+    "test": 1174
+  },
+  "excluded_ids": 94,
+  "chunk_size_chars": 600,
+  "overlap_chars": 100
+}

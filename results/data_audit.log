@@ -1,0 +1,34 @@
+{
+  "exact_group_disjoint": true,
+  "unique_queries": 5667,
+  "unique_contexts": 1522,
+  "cross_split_near_duplicate_candidates": [
+    {
+      "group_a": "958655a9c01ba936ab6768edd87bb1420cd415e6a8fcdf3e889004969c62e16e",
+      "group_b": "8f8a2016b43db66c1fe55f157e3830368fb30bceb8a894b920ab074167134f02",
+      "cosine": 0.9123979031641097
+    },
+    {
+      "group_a": "ec6ec3a2f8eed6570a701cc6cf400cf84fb1bcc9b5c0d9f682fcb48a1c40cb44",
+      "group_b": "6a2d289149931b04e41b6656181594f5cd4462354cf917e72b8fb50b99cf2f85",
+      "cosine": 0.993697020390582
+    },
+    {
+      "group_a": "565ee462cd620c7e566378c2b307a3a57ba3ae2f6a0af0541ba9ae3194e1ec95",
+      "group_b": "b4a8c7dda3e95b77221566a448b7bef07fd50c2ac6b7672f45966c203599f1af",
+      "cosine": 0.9259490919957869
+    },
+    {
+      "group_a": "827caa2763a85f468325f0f847dbc8cd468413070855a8cb454720ef6089eb69",
+      "group_b": "7ccd2b9ae1c14fccc69a98d820c24b4dc42781738ed0ca1cf5d69e309b2431c2",
+      "cosine": 0.9993182422816134
+    },
+    {
+      "group_a": "3b020ee80fc9c9145bf08610aeaf73d4374e56111b2ff0fd3d3d76fa47b6edd4",
+      "group_b": "1294ff7bc0c81814511a2bcb62ee175b885d822559e9bb0b2d22f499eebae55f",
+      "cosine": 0.9057337704753519
+    }
+  ],
+  "method": "char 5gram TF-IDF cosine >=0.9, min_df=2, max_features=50000",
+  "limitation": "heuristic candidates; not proof that no semantic duplicates exist"
+}

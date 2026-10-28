@@ -1,0 +1,11 @@
+# Thai evidence-grounding annotation protocol (draft)
+
+Annotate outputs only after retrieval and generation configuration is frozen. Export opaque response IDs; hide strategy names and timing from annotators. Preserve a private response-ID mapping. Supply the question, reference answers, retrieved chunk IDs/text, and answer. Do not tell annotators whether a response is adaptive.
+
+Two Thai-proficient annotators independently segment each response into atomic factual claims. For each claim record its text and one of: supported by supplied evidence; contradicted by supplied evidence; neither supported nor contradicted. Record supporting/contradicting chunk IDs and a brief rationale. An answer can be factually correct but unfaithful to the supplied evidence; score these separately. A citation is not proof of entailment. Outside knowledge must not substitute for retrieved evidence when judging faithfulness.
+
+For semantic correctness assign 1 only if the response answers the question correctly without a material contradictory statement; otherwise 0. Record uncertainty for adjudication, never convert uncertainty automatically to 0. Exact-match score is computed independently. For abstention, mark whether the output declines to answer, then assess appropriateness against a separately established answerability label. iApp answerable-only examples cannot establish balanced abstention accuracy.
+
+Adjudication retains both original annotations, disagreement explanations, and a third/adjudicated label. Export adjudicated counts as `supported_claims` and `unsupported_claims`; the latter combines contradicted and insufficient-evidence claims, while original files preserve the distinction. Zero-claim responses get zero counts and undefined claim faithfulness. Report denominator and annotation coverage for every aggregate. Report raw agreement and Cohen's kappa for categorical correctness/support where units are aligned; resolve claim segmentation before computing claim-level agreement.
+
+Do not use generated model judgments as if they were independent human annotations. Public data may include personal names; retain only task-relevant text and avoid releasing contributor/payment metadata. Final annotation guidelines, consent/ethics requirements at the university, and answerability design need advisor review before collecting human judgments.

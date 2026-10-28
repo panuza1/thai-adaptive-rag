@@ -1,0 +1,24 @@
+{
+  "seed": 2027,
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+  "device": "cpu",
+  "threads": 4,
+  "k": 5,
+  "candidate_k": 20,
+  "complexity_length": 24,
+  "margin_threshold": 0.02,
+  "split": "development",
+  "query_limit": 30,
+  "repeats": 1,
+  "ablations": [
+    "none",
+    "complexity",
+    "keyword",
+    "confidence",
+    "hybrid",
+    "reranking"
+  ],
+  "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "reranker_revision": "1427fd652930e4ba29e8149678df786c240d8825"
+}

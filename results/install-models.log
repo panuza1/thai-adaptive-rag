@@ -1,0 +1,99 @@
+Requirement already satisfied: torch<3,>=2.6 in ./.venv/lib/python3.10/site-packages (from -r requirements.txt (line 2)) (2.14.1+cpu)
+Requirement already satisfied: numpy<3,>=1.26 in ./.venv/lib/python3.10/site-packages (from -r requirements.txt (line 3)) (2.2.6)
+Collecting sentence-transformers<6,>=5
+  Downloading sentence_transformers-5.7.0-py3-none-any.whl (611 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 611.3/611.3 KB 1.2 MB/s eta 0:00:00
+Collecting transformers<6,>=4.48
+  Using cached transformers-5.20.2-py3-none-any.whl (12.8 MB)
+Collecting huggingface-hub<2,>=0.34
+  Downloading huggingface_hub-1.33.0-py3-none-any.whl (846 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 KB 1.1 MB/s eta 0:00:00
+Requirement already satisfied: pythainlp<6,>=5.1 in ./.venv/lib/python3.10/site-packages (from -r requirements.txt (line 7)) (5.4.0)
+Requirement already satisfied: rank-bm25==0.2.2 in ./.venv/lib/python3.10/site-packages (from -r requirements.txt (line 8)) (0.2.2)
+Requirement already satisfied: matplotlib<4,>=3.8 in ./.venv/lib/python3.10/site-packages (from -r requirements.txt (line 9)) (3.10.9)
+Requirement already satisfied: pytest<10,>=8 in ./.venv/lib/python3.10/site-packages (from -r requirements.txt (line 10)) (9.2.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in ./.venv/lib/python3.10/site-packages (from torch<3,>=2.6->-r requirements.txt (line 2)) (4.16.0)
+Requirement already satisfied: fsspec>=0.8.5 in ./.venv/lib/python3.10/site-packages (from torch<3,>=2.6->-r requirements.txt (line 2)) (2026.9.0)
+Requirement already satisfied: networkx>=2.5.1 in ./.venv/lib/python3.10/site-packages (from torch<3,>=2.6->-r requirements.txt (line 2)) (3.4.2)
+Requirement already satisfied: sympy>=1.13.3 in ./.venv/lib/python3.10/site-packages (from torch<3,>=2.6->-r requirements.txt (line 2)) (1.14.0)
+Requirement already satisfied: filelock in ./.venv/lib/python3.10/site-packages (from torch<3,>=2.6->-r requirements.txt (line 2)) (4.1.0)
+Requirement already satisfied: jinja2 in ./.venv/lib/python3.10/site-packages (from torch<3,>=2.6->-r requirements.txt (line 2)) (3.1.6)
+Requirement already satisfied: setuptools>=77.0.3 in ./.venv/lib/python3.10/site-packages (from torch<3,>=2.6->-r requirements.txt (line 2)) (78.1.0)
+Collecting tokenizers>=0.19
+  Using cached tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+Collecting tqdm>=4.0.0
+  Using cached tqdm-4.70.1-py3-none-any.whl (80 kB)
+Collecting scikit-learn>=0.22.0
+  Using cached scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+Collecting scipy>=1.0.0
+  Using cached scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+Collecting pyyaml>=5.1
+  Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+Collecting regex>=2025.10.22
+  Downloading regex-2026.9.29-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (797 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.6/797.6 KB 1.2 MB/s eta 0:00:00
+Collecting safetensors>=0.8.0
+  Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 KB 1.2 MB/s eta 0:00:00
+Requirement already satisfied: packaging>=20.0 in ./.venv/lib/python3.10/site-packages (from transformers<6,>=4.48->-r requirements.txt (line 5)) (26.3)
+Collecting typer
+  Downloading typer-0.27.3-py3-none-any.whl (123 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.3/123.3 KB 1.3 MB/s eta 0:00:00
+Collecting hf-xet<2.0.0,>=1.6.0
+  Downloading hf_xet-1.7.1-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 1.2 MB/s eta 0:00:00
+Requirement already satisfied: tomli>=1.1.0 in ./.venv/lib/python3.10/site-packages (from huggingface-hub<2,>=0.34->-r requirements.txt (line 6)) (2.5.0)
+Collecting httpx<1,>=0.23.0
+  Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 KB 1.5 MB/s eta 0:00:00
+Collecting click<9.0.0,>=8.4.2
+  Using cached click-8.5.0-py3-none-any.whl (125 kB)
+Requirement already satisfied: importlib-resources in ./.venv/lib/python3.10/site-packages (from pythainlp<6,>=5.1->-r requirements.txt (line 7)) (7.1.0)
+Requirement already satisfied: python-dateutil>=2.7 in ./.venv/lib/python3.10/site-packages (from matplotlib<4,>=3.8->-r requirements.txt (line 9)) (3.0.0)
+Requirement already satisfied: pillow>=8 in ./.venv/lib/python3.10/site-packages (from matplotlib<4,>=3.8->-r requirements.txt (line 9)) (12.3.0)
+Requirement already satisfied: pyparsing>=3 in ./.venv/lib/python3.10/site-packages (from matplotlib<4,>=3.8->-r requirements.txt (line 9)) (3.3.3)
+Requirement already satisfied: cycler>=0.10 in ./.venv/lib/python3.10/site-packages (from matplotlib<4,>=3.8->-r requirements.txt (line 9)) (0.12.1)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv/lib/python3.10/site-packages (from matplotlib<4,>=3.8->-r requirements.txt (line 9)) (1.3.2)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.10/site-packages (from matplotlib<4,>=3.8->-r requirements.txt (line 9)) (4.65.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.10/site-packages (from matplotlib<4,>=3.8->-r requirements.txt (line 9)) (1.5.1)
+Requirement already satisfied: iniconfig>=2 in ./.venv/lib/python3.10/site-packages (from pytest<10,>=8->-r requirements.txt (line 10)) (2.3.1)
+Requirement already satisfied: pygments>=2.15 in ./.venv/lib/python3.10/site-packages (from pytest<10,>=8->-r requirements.txt (line 10)) (2.21.0)
+Requirement already satisfied: pluggy<2,>=1.6 in ./.venv/lib/python3.10/site-packages (from pytest<10,>=8->-r requirements.txt (line 10)) (1.7.0)
+Requirement already satisfied: exceptiongroup>=1 in ./.venv/lib/python3.10/site-packages (from pytest<10,>=8->-r requirements.txt (line 10)) (1.3.1)
+Collecting httpcore==1.*
+  Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 KB 1.4 MB/s eta 0:00:00
+Collecting idna
+  Using cached idna-3.20-py3-none-any.whl (69 kB)
+Collecting anyio
+  Using cached anyio-4.15.1-py3-none-any.whl (132 kB)
+Collecting certifi
+  Using cached certifi-2026.10.23-py3-none-any.whl (135 kB)
+Collecting h11>=0.16
+  Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Requirement already satisfied: six>=1.6 in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib<4,>=3.8->-r requirements.txt (line 9)) (1.17.0)
+Requirement already satisfied: tzdata in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib<4,>=3.8->-r requirements.txt (line 9)) (2026.6)
+Collecting threadpoolctl>=3.1.0
+  Using cached threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+Collecting joblib>=1.2.0
+  Using cached joblib-1.6.0-py3-none-any.whl (306 kB)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./.venv/lib/python3.10/site-packages (from sympy>=1.13.3->torch<3,>=2.6->-r requirements.txt (line 2)) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.10/site-packages (from jinja2->torch<3,>=2.6->-r requirements.txt (line 2)) (3.0.3)
+Collecting rich>=13.8.0
+  Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 KB 1.2 MB/s eta 0:00:00
+Collecting shellingham>=1.3.0
+  Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Collecting annotated-doc>=0.0.2
+  Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Collecting cloudpickle>=3.0
+  Using cached cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Collecting markdown-it-py>=2.2.0
+  Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 KB 1.3 MB/s eta 0:00:00
+Collecting mdurl~=0.1
+  Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: tqdm, threadpoolctl, shellingham, scipy, safetensors, regex, pyyaml, mdurl, idna, hf-xet, h11, cloudpickle, click, certifi, annotated-doc, markdown-it-py, joblib, httpcore, anyio, scikit-learn, rich, httpx, typer, huggingface-hub, tokenizers, transformers, sentence-transformers
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+generate-parameter-library-py 0.7.7 requires typeguard, which is not installed.
+Successfully installed annotated-doc-0.0.5 anyio-4.15.1 certifi-2026.10.23 click-8.5.0 cloudpickle-3.1.2 h11-0.16.0 hf-xet-1.7.1 httpcore-1.0.9 httpx-0.28.1 huggingface-hub-1.33.0 idna-3.20 joblib-1.6.0 markdown-it-py-4.2.0 mdurl-0.1.2 pyyaml-6.0.3 regex-2026.9.29 rich-15.0.0 safetensors-0.8.0 scikit-learn-1.7.2 scipy-1.15.3 sentence-transformers-5.7.0 shellingham-1.5.4 threadpoolctl-3.7.0 tokenizers-0.23.3 tqdm-4.70.1 transformers-5.20.2 typer-0.27.3

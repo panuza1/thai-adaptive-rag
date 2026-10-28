@@ -1,0 +1,646 @@
+30mm
+from
+edge
+30mm
+from
+edge
+Camera Ready
+ Guidelines for 
+ORAL PRESENTATION
+Author1
+1
+, Author2
+2
+ and 
+Author3
+3
+*
+1
+Department of 
+…...
+…
+...
+,
+ 
+Faculty 
+of 
+ …
+…………
+, 
+xxx
+ 
+University, Phitsanulok, Thailand
+                
+2
+Department of 
+…
+….….
+,
+ 
+Faculty 
+of 
+…
+……
+.
+……
+, 
+xxx 
+University
+, 
+Chiang Rai
+, Thailand
+                                      3
+Department of 
+…
+…
+…
+.
+ 
+,
+ 
+Faculty of 
+…
+…...…
+.
+.
+…
+, 
+xxx
+ 
+University,
+ 
+Bangkok
+, Thailand
+Emails
+:
+ 
+autho
+r1
+@xyz.ac.th, 
+autho
+r1
+@xyz.ac.th, 
+autho
+r1
+@xyz.ac.th
+*
+ 
+82 
+mm
+82 
+mm
+82 
+mm
+82 
+mm
+A
+BSTRACT
+20mm
+from
+edge
+20mm
+from
+edge
+This document provides 
+authors with instructions on how to 
+properly 
+format a manuscript submitted for 
+a possible publication in 
+AUC
+2
+ 
+202x 
+Proceedings
+. 
+Authors are required to strictly 
+adhere to the
+se
+ formatting 
+specifications
+. 
+Failure to conform 
+to
+ these 
+specifications
+ may result in rejection of the manuscript
+. 
+All manuscripts can be written either in English or in Thai
+. 
+For Thai manuscripts, please follow the Thai preparation guidelines 
+(
+provided separately in another template
+). 
+Each manuscript should 
+also
+ 
+have a 100
+-
+150 words abstract
+. 
+It should 
+appear at the top of the left
+ 
+column
+.
+Keywords –
+ 
+One, two, three, four,
+ five
+I.
+ 
+Introduction
+This
+ 
+document
+ include
+s
+ complete descriptions of the fonts,
+ styles,
+ spacing, and related information for 
+typesetting
+ your manuscripts
+. 
+Please follow th
+em carefully 
+and if you have
+ any questions, fe
+e
+l free to direct them to the c
+onference
+ organizer 
+(
+see 
+more details or ask through any channel provided by the organizer)
+.
+II
+. 
+Formatting your paper
+Your 
+man
+uscript should be formatted for an 
+A4
+-
+size
+d
+ paper
+.
+ 
+All printed material, including text, illustrations, and 
+table
+s, must be kept within a print area of 
+17
+2
+ mm wide by 2
+43
+ mm
+ 
+long
+. 
+Do not write or print anything outside the print area
+. 
+The to
+p
+ 
+margin 
+and the bottom margin 
+must be 25 mm
+ each, except for the title page 
+(
+for the title page, 
+the
+ top 
+margin
+ 
+should
+ be 30 mm
+ and the bottom margin should be 25 mm
+).
+ 
+T
+he left margin must be 20
+ mm
+. 
+All 
+text
+ must be in a two
+-
+column format
+. 
+Columns are to be 
+8
+2
+ mm wide, with a 6 mm s
+eparation
+ between them
+. 
+Text must be fully justified
+ 
+[1]
+.
+III
+. 
+Paper title
+25mm from 
+edge
+25mm from 
+edge
+The paper title 
+(
+on the first page
+) 
+should begin 
+30
+ 
+mm from the top edge of the page, centered, completely
+ 
+*
+Corresponding Author
+capitalized, and in 
+boldface 14
+-
+points Times
+ 
+New Roman
+ font
+. 
+The authors
+’ 
+names should appear below the title and should be in 12
+-
+points Times New Roman font
+. 
+Leave a blank line between the title and the authors
+’ 
+names
+.  
+Place the authors
+’ 
+affiliations below the authors
+’ 
+names
+. 
+Use 10
+-
+points Times New Roman font for the affiliations
+. 
+Leave a blank line between the names and the affiliations
+.
+6
+ 
+mm
+6
+ 
+mm
+IV
+.
+ 
+style
+s
+ 
+and fonts
+20mm
+from
+edge
+20mm
+from
+edge
+To give the proceedings a uniform look, use the following font style
+s
+ and size
+s
+. 
+For the main body of the document, use 10
+-
+point
+s
+ Times New Roman font
+. 
+For
+ 
+figure captions
+ and table captions
+, use 8
+-
+point
+s
+ Times New Roman font
+.
+ 
+Please do not double
+-
+space your paper
+.  
+The first paragraph in each section should not be indented, but all following paragraphs within the section should be indented as these paragraphs demonstrate
+.
+V
+.
+ 
+MAjor headings
+Major headings, for example, 
+“
+1
+. 
+Introduction
+”
+, should appear in all capital letters, bold face
+d
+, centered in the column, with one blank line before, and one blank line after
+. 
+Use a period 
+(“.”) 
+after the heading number, not a colon
+.
+ 
+A
+. 
+Subheadings
+ Format
+    
+Sub
+headings should appear in lower
+case 
+(
+with the 
+initial 
+letter of each 
+word capitalized
+) 
+and 
+in boldface
+.
+  They should start at the left margin on a separate line
+ (
+as shown in this document
+)
+.
+Sub
+-
+subheadings
+    Sub-subheadings
+ are 
+discouraged
+. 
+However, if you must use th
+em, they should appear in lower
+case 
+(
+with the 
+initial 
+letter of each 
+word capitalized
+) 
+and start at the left margin on a separate line, with paragraph text beginning on the following line
+.
+  They should be in 
+italics
+.
+Sub
+-
+subheadings2
+,
+ 
+Sub-subheadings2 are 
+discouraged
+.
+ However, if you must use them, they 
+should appear in lowercase
+ 
+with the initial letter of each word capitalized) and start at the left margin on a separate line, with paragraph text beginning on the following line. They should be in italics.
+6
+. 
+Illustrations
+Illustrations such as figures and tables
+ must appear within the designated margins
+.  
+They may span the two columns
+.  
+Place
+ 
+the 
+illustrations at the top of 
+the page
+ rather than i
+n the middle or at the bottom
+. 
+Caption and number every
+ illustration
+. 
+A f
+igure caption should be placed 
+below
+ each figure while 
+a 
+table caption should be placed 
+a
+top each table
+. 
+All halftone illustrations must be clear black and white prints
+.  
+Do not use any colors in illustrations
+.
+Example Figure
+Example Figure
+Figure 1
+. 
+A figure c
+aption should be placed below the figure
+.
+7
+. 
+Equations
+Equations s
+hould be numbered in the order that they 
+appeared
+. 
+The equation number should be placed in parentheses and aligned with the right edge of the column 
+(
+as shown in an example below
+). 
+     
+a 
++ 
+b 
+= 
+c
+ + 
+2
+  
+(
+1
+)
+The equation should be 
+centered within 
+a
+ column
+. 
+Leave one blank line before and one blank line after the equation
+. 
+8
+. 
+Page numbering
+D
+o 
+not
+ paginate your 
+manuscript
+. 
+Page numbers, session numbers, and conference identification will be inserted when the 
+manuscript
+ is included in the proceedings
+.
+ 
+Both 
+English 
+and Thai 
+manuscript should be 
+5-
+10
+ pages
+, 
+i
+ncluding all text, figures, and references
+.
+9
+. 
+Citation Style
+The References section should appear at the end of the manuscript
+. 
+The heading of the References section should 
+not
+ be numbered
+. 
+In 
+the References
+ section, l
+ist and number all 
+the bibliographical 
+refer
+ences cited in your manuscript
+. 
+Use the IEEE citation and reference style
+ 
+[2].
+ 
+The references 
+should
+ be 
+listed
+ 
+in the order that they 
+are cited
+ in the manuscript
+. 
+When referring to them in the text, 
+type the corresponding reference number in square brackets as shown at the end of this sentence
+ 
+[
+3
+].
+Table 1
+. 
+A table caption should be placed above the
+ 
+table
+.
+Name
+Age
+Weight 
+(
+kg
+)
+Alice
+12
+30
+Bob
+13
+28
+Charlie
+14
+35
+References
+[
+1
+]
+ 
+ 
+A
+.
+ 
+B
+. 
+Green
+, C
+.
+ 
+D
+. 
+Black
+, and E
+.
+ 
+F
+. 
+White
+, 
+“
+Article Title,
+” 
+Journal
+, 
+vol
+. 
+100, no
+. 
+1
+,
+ pp
+. 
+1
+-
+10, D
+ec
+. 
+2000
+.
+[
+2
+]
+  
+C
+.
+ 
+D
+.
+ 
+Black
+, A
+.
+ 
+B
+. 
+Green
+, and E
+.
+ 
+F
+. 
+White
+, 
+Book Title
+,
+ 3rd ed
+. 
+ 
+New York
+:
+ 
+McGraw
+-
+Hill
+, 
+2001
+.
+[3
+]
+ 
+R. Nicole, “Title of paper with only first word capitalized,” J. Name Stand. Abbrev., in press.
