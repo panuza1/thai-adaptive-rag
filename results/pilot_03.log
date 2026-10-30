@@ -1,1 +1,151 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Error while downloading from https://huggingface.co/intfloat/multilingual-e5-small/resolve/614241f622f53c4eeff9890bdc4f31cfecc418b3/model.safetensors: The read operation timed out
+Trying to resume download...
+Error while downloading from https://huggingface.co/intfloat/multilingual-e5-small/resolve/614241f622f53c4eeff9890bdc4f31cfecc418b3/model.safetensors: The read operation timed out
+Trying to resume download...
+Error while downloading from https://huggingface.co/intfloat/multilingual-e5-small/resolve/614241f622f53c4eeff9890bdc4f31cfecc418b3/model.safetensors: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)
+Trying to resume download...
+Error while downloading from https://huggingface.co/intfloat/multilingual-e5-small/resolve/614241f622f53c4eeff9890bdc4f31cfecc418b3/model.safetensors: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)
+Trying to resume download...
+Error while downloading from https://huggingface.co/intfloat/multilingual-e5-small/resolve/614241f622f53c4eeff9890bdc4f31cfecc418b3/model.safetensors: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)
+Trying to resume download...
+Error while downloading from https://huggingface.co/intfloat/multilingual-e5-small/resolve/614241f622f53c4eeff9890bdc4f31cfecc418b3/model.safetensors: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)
+Trying to resume download...
+Error while downloading from https://huggingface.co/intfloat/multilingual-e5-small/resolve/614241f622f53c4eeff9890bdc4f31cfecc418b3/model.safetensors: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)
+Max retries exceeded.
+Traceback (most recent call last):
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_sync/connection.py", line 156, in _connect
+    stream = stream.start_tls(**kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_backends/sync.py", line 154, in start_tls
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 673, in _get_resolved_checkpoint_files
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 370, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 634, in cached_files
+    raise e
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 537, in cached_files
+    hf_hub_download(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 266, in _inner
+    return fn(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1047, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1285, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 2032, in _download_to_tmp_and_move
+    http_get(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 475, in http_get
+    return http_get(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 475, in http_get
+    return http_get(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 475, in http_get
+    return http_get(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 475, in http_get
+    return http_get(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 475, in http_get
+    return http_get(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 475, in http_get
+    return http_get(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 391, in http_get
+    response = stack.enter_context(
+  File "/usr/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/usr/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 709, in http_stream_backoff
+    yield from _http_backoff_base(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 530, in _http_backoff_base
+    with client.stream(method=method, url=url, **kwargs) as response:
+  File "/usr/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpx/_client.py", line 868, in stream
+    response = self.send(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/panu/Documents/hackathon/research/src/run.py", line 92, in <module>
+    a=p.parse_args(); main(a.config,a.output)
+  File "/home/panu/Documents/hackathon/research/src/run.py", line 44, in main
+    encoder=SentenceTransformer(cfg['embedding_model'],revision=cfg['embedding_revision'],device=cfg['device'])
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/util/decorators.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/sentence_transformer/model.py", line 188, in __init__
+    super().__init__(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/base/model.py", line 222, in __init__
+    modules, self.module_kwargs = self._load_modules(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/base/model.py", line 1023, in _load_modules
+    return self._load_config_modules(model_name_or_path, **load_kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/base/model.py", line 1229, in _load_config_modules
+    module = module_class.load(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/base/modules/transformer.py", line 2130, in load
+    return cls(model_name_or_path=model_name_or_path, **init_kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/util/decorators.py", line 87, in wrapper
+    return func(*args, **kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/base/modules/transformer.py", line 654, in __init__
+    self.model = self._load_model(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/sentence_transformers/base/modules/transformer.py", line 1836, in _load_model
+    return model_cls.from_pretrained(model_name_or_path, config=config, **model_kwargs)
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 411, in from_pretrained
+    return model_class.from_pretrained(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4251, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/home/panu/Documents/hackathon/research/.venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 753, in _get_resolved_checkpoint_files
+    raise OSError(
+OSError: Can't load the model for 'intfloat/multilingual-e5-small'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'intfloat/multilingual-e5-small' is the correct path to a directory containing a file named pytorch_model.bin.

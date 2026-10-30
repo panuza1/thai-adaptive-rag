@@ -1,0 +1,114 @@
+\begin{thebibliography}{17}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Lewis et~al.(2020)]{ref1}
+P.~Lewis et~al.
+\newblock {Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,},
+  2020.
+\newblock URL \url{https://arxiv.org/abs/2005.11401}.
+
+\bibitem[Karpukhin et~al.(2020)]{ref2}
+V.~Karpukhin et~al.
+\newblock {Dense Passage Retrieval for Open-Domain Question Answering,}, 2020.
+\newblock URL \url{https://arxiv.org/abs/2004.04906}.
+
+\bibitem[Robertson and Zaragoza(2009)]{ref3}
+S.~Robertson and H.~Zaragoza.
+\newblock {The Probabilistic Relevance Framework: BM25 and Beyond,}, 2009.
+\newblock URL \url{https://doi.org/10.1561/1500000019}.
+
+\bibitem[Cormack et~al.(2009)Cormack, Clarke, and B{\"u}ttcher]{ref4}
+G.~V. Cormack, C.~L.~A. Clarke, and S.~B{\"u}ttcher.
+\newblock {Reciprocal Rank Fusion outperforms Condorcet and individual Rank
+  Learning Methods,}, 2009.
+\newblock URL \url{https://doi.org/10.1145/1571941.1572114}.
+
+\bibitem[Bruch et~al.(2023)Bruch, Gai, and Ingber]{ref5}
+S.~Bruch, S.~Gai, and A.~Ingber.
+\newblock {An Analysis of Fusion Functions for Hybrid Retrieval,}, 2023.
+\newblock URL \url{https://doi.org/10.1145/3596512}.
+
+\bibitem[Nogueira and Cho(2019)]{ref6}
+R.~Nogueira and K.~Cho.
+\newblock {Passage Re-ranking with BERT,}, 2019.
+\newblock URL \url{https://arxiv.org/abs/1901.04085}.
+
+\bibitem[Jeong et~al.(2024)]{ref7}
+S.~Jeong et~al.
+\newblock {Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language
+  Models through Question Complexity,}, 2024.
+\newblock URL \url{https://aclanthology.org/2024.naacl-long.389/}.
+
+\bibitem[Asai et~al.(2023)]{ref8}
+A.~Asai et~al.
+\newblock {Self-RAG: Learning to Retrieve, Generate, and Critique through
+  Self-Reflection,}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2310.11511}.
+
+\bibitem[Tang et~al.(2025)]{ref9}
+X.~Tang et~al.
+\newblock {MBA-RAG: a Bandit Approach for Adaptive Retrieval-Augmented
+  Generation through Question Complexity,}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2412.01572}.
+
+\bibitem[Marina et~al.(2025)]{ref10}
+M.~Marina et~al.
+\newblock {LLM-Independent Adaptive RAG: Let the Question Speak for Itself,},
+  2025.
+\newblock URL \url{https://arxiv.org/abs/2505.04253}.
+
+\bibitem[Zhang et~al.(2022)]{ref11}
+X.~Zhang et~al.
+\newblock {Making a MIRACL: Multilingual Information Retrieval Across a
+  Continuum of Languages,}, 2022.
+\newblock URL \url{https://arxiv.org/abs/2210.09984}.
+
+\bibitem[Es et~al.(2023)]{ref12}
+S.~Es et~al.
+\newblock {Ragas: Automated Evaluation of Retrieval Augmented Generation,},
+  2023.
+\newblock URL \url{https://arxiv.org/abs/2309.15217}.
+
+\bibitem[Jearanaitanakij et~al.(2024)]{ref13}
+K.~Jearanaitanakij et~al.
+\newblock {Thai Question-Answering System Using Similarity Search and LLM,},
+  2024.
+\newblock URL \url{https://doi.org/10.37936/ecti-cit.2024183.256043}.
+
+\bibitem[Promwang and Boonma(n.d.)]{ref14}
+P.~Promwang and P.~Boonma.
+\newblock {Development of a Retrieval-Augmented Generation System for Legal
+  Data in Thai Language,}.
+\newblock \emph{Data Science and Engineering (DSE) Record}, 6\penalty0 (1),
+  n.d.
+\newblock URL \url{https://datascience.cmu.ac.th/storage/articles/73.pdf}.
+\newblock Publication year not stated in the inspected source; accessed
+  2026-10-29.
+
+\bibitem[Suyasri et~al.(2026)Suyasri, Akarajaradwong, and
+  Chaksangchaichot]{ref15}
+P.~Suyasri, P.~Akarajaradwong, and C.~Chaksangchaichot.
+\newblock {An Empirical Study of Evidence Retrieval for Retrieval Augmented
+  Generation over the Thai Royal Gazette,}.
+\newblock In \emph{Proceedings of the Natural Legal Language Processing
+  Workshop 2026}, pages 212--236, 2026.
+\newblock URL \url{https://aclanthology.org/2026.nllp-1.19/}.
+
+\bibitem[Ukosaramig and Viriyayudhakorn(2026)]{ref16}
+P.~Ukosaramig and K.~Viriyayudhakorn.
+\newblock {TSWAP: A Multilingual Retrieval-Augmented Thai Wellness Advisor,},
+  2026.
+\newblock URL \url{https://arxiv.org/abs/2608.22917}.
+
+\bibitem[{iApp Technology}(2026)]{ref17}
+{iApp Technology}.
+\newblock {iapp-wiki-qa-dataset,}, 2026.
+\newblock URL \url{https://github.com/iapp-technology/iapp-wiki-qa-dataset}.
+\newblock Pinned source revision 644a29c59bac62d5b15b9e9b06c55bba00708eca;
+  accessed 2026-10-29.
+
+\end{thebibliography}

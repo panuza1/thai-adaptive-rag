@@ -1,0 +1,10 @@
+{
+  "purpose": "synthetic API smoke check only",
+  "model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+  "revision": "1427fd652930e4ba29e8149678df786c240d8825",
+  "scores": [
+    5.567894458770752,
+    -8.99975299835205
+  ],
+  "finite": true
+}

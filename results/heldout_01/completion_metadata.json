@@ -1,0 +1,22 @@
+{
+  "resumed_completed_records": 235,
+  "appended_records": 5,
+  "original_records_preserved": true,
+  "model_integrity": "results/model_integrity.json",
+  "generation_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "source_hashes_at_completion": {
+    "src/check_token_budget.py": "a4a7476901b19c51c9e3d5d5142a431cfc58ce13c6c83cb65699c7d128842202",
+    "src/analyze.py": "c7382c028ad40daf693bf87e48015a0e408a1f3220f56f9fed53e22f9931d54d",
+    "src/prepare.py": "347e8a6904cdee69838f4a8d584d839696b5da24fca0eda4da4515795be4324d",
+    "src/lexical_pilot.py": "2a4ceab231e0157e1d0fb44d819e02065576b49225553247feec9a0262b12718",
+    "src/run.py": "f9d3724ab4d21261fd8853738b7d45aad3d0e641558c834b548c0d87e66212f7",
+    "src/core.py": "32fa596b6521c2b5914b42cf0c97a1b4fdbf1febb908923d4fb48a6301d06b8c",
+    "src/score_answers.py": "1155e27f550e4268ed52451c1f44416c6d2093d7513a748a19c46a521958cf63",
+    "src/generate.py": "aba879b77c374667992cd467de742deb022c107174c43ac1a50725ed27f92195",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/report_results.py": "e69e733f1100742fed2bfbcd49ef211ca61b74eca106d6d960a52b7783c73117",
+    "src/audit.py": "3719b7d4704388f11dad58333f5f8a969dd233e34e53479c40c16b250d8baa87",
+    "src/answer_report.py": "bcc1a9a98bb044f56f16d93fbe7a71a88dcc4c76af150b7730c91c09bb79977a"
+  },
+  "note": "Original source hashes at retrieval start are preserved in metadata.json. Resume adds validation/append support without changing generation parameters. Retrieval metadata generation_status describes the end of the retrieval phase only."
+}

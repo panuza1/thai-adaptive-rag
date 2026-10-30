@@ -1,0 +1,110 @@
+[
+  {
+    "comparison": "P1:none - B1",
+    "metric": "exact_match",
+    "mean_delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "comparison": "P1:none - B1",
+    "metric": "estimated_end_to_end_seconds",
+    "mean_delta": 1.2200287379831933,
+    "ci95": [
+      0.36050129382540597,
+      2.0046183585207764
+    ]
+  },
+  {
+    "comparison": "P1:none - B1",
+    "metric": "input_tokens",
+    "mean_delta": 15.9,
+    "ci95": [
+      2.3856378233719893,
+      32.79435483870965
+    ]
+  },
+  {
+    "comparison": "P1:none - B1",
+    "metric": "output_tokens",
+    "mean_delta": 1.4166666666666667,
+    "ci95": [
+      -0.6825814536340852,
+      4.317713464696221
+    ]
+  },
+  {
+    "comparison": "P1:none - B2",
+    "metric": "exact_match",
+    "mean_delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "comparison": "P1:none - B2",
+    "metric": "estimated_end_to_end_seconds",
+    "mean_delta": 1.7372003015333612,
+    "ci95": [
+      0.15724180715363056,
+      3.3097104408949414
+    ]
+  },
+  {
+    "comparison": "P1:none - B2",
+    "metric": "input_tokens",
+    "mean_delta": 35.95,
+    "ci95": [
+      -5.029693283976731,
+      79.40952683615818
+    ]
+  },
+  {
+    "comparison": "P1:none - B2",
+    "metric": "output_tokens",
+    "mean_delta": 9.666666666666666,
+    "ci95": [
+      0.4284040178571428,
+      18.729855515420944
+    ]
+  },
+  {
+    "comparison": "P1:none - B3",
+    "metric": "exact_match",
+    "mean_delta": 0.016666666666666666,
+    "ci95": [
+      0.0,
+      0.05
+    ]
+  },
+  {
+    "comparison": "P1:none - B3",
+    "metric": "estimated_end_to_end_seconds",
+    "mean_delta": 0.6544996468165398,
+    "ci95": [
+      -0.5455807474911295,
+      1.89084759870927
+    ]
+  },
+  {
+    "comparison": "P1:none - B3",
+    "metric": "input_tokens",
+    "mean_delta": 22.766666666666666,
+    "ci95": [
+      -18.12811986863711,
+      61.95291124929337
+    ]
+  },
+  {
+    "comparison": "P1:none - B3",
+    "metric": "output_tokens",
+    "mean_delta": 6.233333333333333,
+    "ci95": [
+      0.9469600725952813,
+      12.318072033898297
+    ]
+  }
+]

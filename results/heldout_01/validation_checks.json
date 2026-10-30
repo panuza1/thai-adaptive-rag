@@ -1,0 +1,15 @@
+{
+  "rows": 1620,
+  "queries": 60,
+  "article_groups": 55,
+  "repetitions": 3,
+  "systems": 9,
+  "frozen_query_ids_match": true,
+  "group_disjointness": true,
+  "ranking_repeat_consistency": true,
+  "limitations": [
+    "Non-exhaustive derived relevance",
+    "Remaining near-duplicate templates",
+    "Unknown pretraining contamination"
+  ]
+}

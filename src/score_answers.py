@@ -32,7 +32,7 @@ def score(rows):
                         'hallucination_rate_factual_responses':sum(r['unsupported_claims']>0 for r in factual)/len(factual) if factual else None,
                         'abstention_accuracy':mean('abstention_correct'),
                         'mean_input_tokens':mean('input_tokens'),'mean_output_tokens':mean('output_tokens'),
-                        'mean_end_to_end_seconds':mean('end_to_end_seconds')}
+                        'mean_estimated_end_to_end_seconds':mean('estimated_end_to_end_seconds')}
     return result
 
 if __name__=='__main__':

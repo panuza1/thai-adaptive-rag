@@ -1,0 +1,15 @@
+{
+  "retrieval_rows": 1620,
+  "generation_rows": 240,
+  "measured_retrieval_wall_seconds_all_repeats_and_ablations": 347.3503425570018,
+  "measured_retrieval_process_cpu_seconds_all_repeats_and_ablations": 1550.3626873600028,
+  "measured_generation_wall_seconds": 10136.487770786012,
+  "measured_generation_process_cpu_seconds": 38206.46547429601,
+  "shared_index_setup_wall_seconds": 158.072888659,
+  "input_tokens": 461175,
+  "output_tokens": 13557,
+  "api_cost_usd": 0,
+  "energy_kwh": null,
+  "hardware_cost_usd": null,
+  "note": "Wall segments are measured separately. Loading/download/analysis/idle time is excluded; this is not a direct full-request benchmark or total financial cost."
+}

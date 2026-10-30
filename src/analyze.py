@@ -39,11 +39,18 @@ def analyze(path):
     with (out/'summary.csv').open('w') as f:
         writer=csv.DictWriter(f,fieldnames=list(summary[0])); writer.writeheader(); writer.writerows(summary)
     fig,ax=plt.subplots(figsize=(7,4))
-    for s in summary:
+    for s in [s for s in summary if s['system'] in ['B1','B2','B3','P1:none']]:
         ax.scatter(s['retrieval_seconds']*1000,s['ndcg'],color='black',marker='x')
-        ax.annotate(s['system'],(s['retrieval_seconds']*1000,s['ndcg']),fontsize=7)
-    ax.set(xlabel='Mean retrieval latency (ms)',ylabel='nDCG@5',title='Development pilot — not held-out evidence')
+        ax.annotate(s['system'],(s['retrieval_seconds']*1000,s['ndcg']),fontsize=9,xytext=(4,5),textcoords='offset points')
+    ax.set(xlabel='Mean retrieval latency (ms)',ylabel='nDCG@5',title=json.loads((out/'config.json').read_text())['split'].capitalize()+' retrieval comparison')
+    ax.margins(x=.12,y=.15)
     fig.tight_layout(); fig.savefig(out/'tradeoff.png',dpi=180); plt.close(fig)
+    fig,axes=plt.subplots(1,2,figsize=(10,5),sharey=True)
+    labels=[s['system'] for s in summary]
+    axes[0].barh(labels,[s['ndcg'] for s in summary],color='gray')
+    axes[1].barh(labels,[s['retrieval_seconds']*1000 for s in summary],color='gray')
+    axes[0].set_xlabel('nDCG@5');axes[1].set_xlabel('Mean retrieval latency (ms)')
+    fig.tight_layout();fig.savefig(out/'ablations.png',dpi=180);plt.close(fig)
     routes=Counter(r['strategy'] for r in rows if r['system']=='P1:none')
     (out/'routing.json').write_text(json.dumps(routes,indent=2))
     failures=[]

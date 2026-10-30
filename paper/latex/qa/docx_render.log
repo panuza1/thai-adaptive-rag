@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "/home/panu/.codex/plugins/cache/openai-primary-runtime/documents/26.1011.11113/skills/documents/render_docx.py", line 530, in main
+    dpi = calc_dpi_via_ooxml_docx(render_input_path, args.width, args.height)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panu/.codex/plugins/cache/openai-primary-runtime/documents/26.1011.11113/skills/documents/render_docx.py", line 168, in calc_dpi_via_ooxml_docx
+    with ZipFile(input_path, "r") as zf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panu/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py", line 1353, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/panu/Documents/hackathon/research/paper/latex/submission_anonymous.docx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/panu/Documents/hackathon/research/paper/qa/render_with_system_lo.py", line 6, in <module>
+    module.main()
+  File "/home/panu/.codex/plugins/cache/openai-primary-runtime/documents/26.1011.11113/skills/documents/render_docx.py", line 534, in main
+    dpi = calc_dpi_via_pdf(
+          ^^^^^^^^^^^^^^^^^
+  File "/home/panu/.codex/plugins/cache/openai-primary-runtime/documents/26.1011.11113/skills/documents/render_docx.py", line 376, in calc_dpi_via_pdf
+    raise RuntimeError("Failed to convert input to PDF for DPI computation.\n" + debug)
+RuntimeError: Failed to convert input to PDF for DPI computation.
+--- DOCX->PDF ---
+CMD: /usr/bin/soffice -env:UserInstallation=file:///tmp/soffice_profile_y2junkmb --invisible --headless --norestore --convert-to pdf --outdir /tmp/soffice_convert_a8p_wvcm /home/panu/Documents/hackathon/research/paper/latex/submission_anonymous.docx
+EXIT: 0
+STDERR:
+Warning: failed to launch javaldx - java may not function correctly
+Error: source file could not be loaded
+--- DOCX->ODT ---
+CMD: /usr/bin/soffice -env:UserInstallation=file:///tmp/soffice_profile_y2junkmb --invisible --headless --norestore --convert-to odt --outdir /tmp/soffice_convert_a8p_wvcm /home/panu/Documents/hackathon/research/paper/latex/submission_anonymous.docx
+EXIT: 0
+STDERR:
+Warning: failed to launch javaldx - java may not function correctly
+Error: source file could not be loaded

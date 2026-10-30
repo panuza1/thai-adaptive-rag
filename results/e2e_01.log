@@ -1,0 +1,244 @@
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6794.19it/s]
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 3236.54it/s]
+Batches:   0%|          | 0/202 [00:00<?, ?it/s]Batches:   0%|          | 1/202 [00:01<04:29,  1.34s/it]Batches:   1%|          | 2/202 [00:02<03:42,  1.11s/it]Batches:   1%|▏         | 3/202 [00:03<03:44,  1.13s/it]Batches:   2%|▏         | 4/202 [00:04<03:53,  1.18s/it]Batches:   2%|▏         | 5/202 [00:06<04:01,  1.22s/it]Batches:   3%|▎         | 6/202 [00:06<03:44,  1.15s/it]Batches:   3%|▎         | 7/202 [00:07<03:32,  1.09s/it]Batches:   4%|▍         | 8/202 [00:09<03:36,  1.11s/it]Batches:   4%|▍         | 9/202 [00:10<03:42,  1.15s/it]Batches:   5%|▍         | 10/202 [00:11<03:31,  1.10s/it]Batches:   5%|▌         | 11/202 [00:12<03:37,  1.14s/it]Batches:   6%|▌         | 12/202 [00:13<03:37,  1.14s/it]Batches:   6%|▋         | 13/202 [00:14<03:34,  1.14s/it]Batches:   7%|▋         | 14/202 [00:16<03:36,  1.15s/it]Batches:   7%|▋         | 15/202 [00:17<03:29,  1.12s/it]Batches:   8%|▊         | 16/202 [00:18<03:20,  1.08s/it]Batches:   8%|▊         | 17/202 [00:19<03:28,  1.13s/it]Batches:   9%|▉         | 18/202 [00:20<03:38,  1.19s/it]Batches:   9%|▉         | 19/202 [00:21<03:20,  1.10s/it]Batches:  10%|▉         | 20/202 [00:22<03:01,  1.01it/s]Batches:  10%|█         | 21/202 [00:23<03:10,  1.05s/it]Batches:  11%|█         | 22/202 [00:24<03:05,  1.03s/it]Batches:  11%|█▏        | 23/202 [00:25<02:57,  1.01it/s]Batches:  12%|█▏        | 24/202 [00:26<02:48,  1.05it/s]Batches:  12%|█▏        | 25/202 [00:27<02:51,  1.03it/s]Batches:  13%|█▎        | 26/202 [00:28<03:03,  1.04s/it]Batches:  13%|█▎        | 27/202 [00:29<03:09,  1.08s/it]Batches:  14%|█▍        | 28/202 [00:30<03:14,  1.12s/it]Batches:  14%|█▍        | 29/202 [00:32<03:20,  1.16s/it]Batches:  15%|█▍        | 30/202 [00:33<03:21,  1.17s/it]Batches:  15%|█▌        | 31/202 [00:34<03:29,  1.23s/it]Batches:  16%|█▌        | 32/202 [00:35<03:34,  1.26s/it]Batches:  16%|█▋        | 33/202 [00:37<03:26,  1.22s/it]Batches:  17%|█▋        | 34/202 [00:38<03:10,  1.14s/it]Batches:  17%|█▋        | 35/202 [00:39<03:13,  1.16s/it]Batches:  18%|█▊        | 36/202 [00:40<03:09,  1.14s/it]Batches:  18%|█▊        | 37/202 [00:41<03:14,  1.18s/it]Batches:  19%|█▉        | 38/202 [00:42<03:05,  1.13s/it]Batches:  19%|█▉        | 39/202 [00:43<03:04,  1.13s/it]Batches:  20%|█▉        | 40/202 [00:45<03:21,  1.24s/it]Batches:  20%|██        | 41/202 [00:46<03:03,  1.14s/it]Batches:  21%|██        | 42/202 [00:46<02:40,  1.00s/it]Batches:  21%|██▏       | 43/202 [00:47<02:25,  1.09it/s]Batches:  22%|██▏       | 44/202 [00:48<02:27,  1.07it/s]Batches:  22%|██▏       | 45/202 [00:49<02:18,  1.13it/s]Batches:  23%|██▎       | 46/202 [00:50<02:32,  1.03it/s]Batches:  23%|██▎       | 47/202 [00:51<02:30,  1.03it/s]Batches:  24%|██▍       | 48/202 [00:52<02:35,  1.01s/it]Batches:  24%|██▍       | 49/202 [00:53<02:35,  1.02s/it]Batches:  25%|██▍       | 50/202 [00:54<02:43,  1.08s/it]Batches:  25%|██▌       | 51/202 [00:56<02:49,  1.13s/it]Batches:  26%|██▌       | 52/202 [00:56<02:36,  1.05s/it]Batches:  26%|██▌       | 53/202 [00:57<02:26,  1.02it/s]Batches:  27%|██▋       | 54/202 [00:58<02:23,  1.03it/s]Batches:  27%|██▋       | 55/202 [00:59<02:23,  1.02it/s]Batches:  28%|██▊       | 56/202 [01:00<02:15,  1.07it/s]Batches:  28%|██▊       | 57/202 [01:01<02:14,  1.08it/s]Batches:  29%|██▊       | 58/202 [01:02<02:07,  1.13it/s]Batches:  29%|██▉       | 59/202 [01:02<01:57,  1.22it/s]Batches:  30%|██▉       | 60/202 [01:03<02:02,  1.15it/s]Batches:  30%|███       | 61/202 [01:04<01:56,  1.21it/s]Batches:  31%|███       | 62/202 [01:05<01:50,  1.27it/s]Batches:  31%|███       | 63/202 [01:06<02:08,  1.08it/s]Batches:  32%|███▏      | 64/202 [01:07<02:26,  1.06s/it]Batches:  32%|███▏      | 65/202 [01:08<02:22,  1.04s/it]Batches:  33%|███▎      | 66/202 [01:10<02:38,  1.16s/it]Batches:  33%|███▎      | 67/202 [01:11<02:39,  1.18s/it]Batches:  34%|███▎      | 68/202 [01:13<02:56,  1.32s/it]Batches:  34%|███▍      | 69/202 [01:14<02:56,  1.33s/it]Batches:  35%|███▍      | 70/202 [01:15<02:38,  1.20s/it]Batches:  35%|███▌      | 71/202 [01:16<02:44,  1.26s/it]Batches:  36%|███▌      | 72/202 [01:18<02:41,  1.24s/it]Batches:  36%|███▌      | 73/202 [01:19<02:33,  1.19s/it]Batches:  37%|███▋      | 74/202 [01:19<02:17,  1.07s/it]Batches:  37%|███▋      | 75/202 [01:20<02:05,  1.02it/s]Batches:  38%|███▊      | 76/202 [01:21<01:57,  1.07it/s]Batches:  38%|███▊      | 77/202 [01:22<02:01,  1.03it/s]Batches:  39%|███▊      | 78/202 [01:23<02:02,  1.01it/s]Batches:  39%|███▉      | 79/202 [01:24<01:52,  1.09it/s]Batches:  40%|███▉      | 80/202 [01:25<01:45,  1.16it/s]Batches:  40%|████      | 81/202 [01:25<01:42,  1.19it/s]Batches:  41%|████      | 82/202 [01:26<01:46,  1.13it/s]Batches:  41%|████      | 83/202 [01:27<01:53,  1.05it/s]Batches:  42%|████▏     | 84/202 [01:29<02:01,  1.03s/it]Batches:  42%|████▏     | 85/202 [01:30<01:58,  1.01s/it]Batches:  43%|████▎     | 86/202 [01:31<01:56,  1.00s/it]Batches:  43%|████▎     | 87/202 [01:32<01:55,  1.01s/it]Batches:  44%|████▎     | 88/202 [01:33<01:54,  1.00s/it]Batches:  44%|████▍     | 89/202 [01:34<01:55,  1.02s/it]Batches:  45%|████▍     | 90/202 [01:35<01:49,  1.02it/s]Batches:  45%|████▌     | 91/202 [01:35<01:45,  1.05it/s]Batches:  46%|████▌     | 92/202 [01:37<02:01,  1.10s/it]Batches:  46%|████▌     | 93/202 [01:39<02:15,  1.24s/it]Batches:  47%|████▋     | 94/202 [01:40<02:24,  1.34s/it]Batches:  47%|████▋     | 95/202 [01:41<02:23,  1.35s/it]Batches:  48%|████▊     | 96/202 [01:43<02:22,  1.34s/it]Batches:  48%|████▊     | 97/202 [01:45<02:35,  1.48s/it]Batches:  49%|████▊     | 98/202 [01:46<02:35,  1.50s/it]Batches:  49%|████▉     | 99/202 [01:47<02:28,  1.44s/it]Batches:  50%|████▉     | 100/202 [01:49<02:18,  1.36s/it]Batches:  50%|█████     | 101/202 [01:50<02:11,  1.30s/it]Batches:  50%|█████     | 102/202 [01:51<02:12,  1.32s/it]Batches:  51%|█████     | 103/202 [01:53<02:19,  1.41s/it]Batches:  51%|█████▏    | 104/202 [01:54<02:14,  1.37s/it]Batches:  52%|█████▏    | 105/202 [01:55<02:02,  1.26s/it]Batches:  52%|█████▏    | 106/202 [01:56<01:54,  1.19s/it]Batches:  53%|█████▎    | 107/202 [01:57<01:45,  1.11s/it]Batches:  53%|█████▎    | 108/202 [01:58<01:51,  1.19s/it]Batches:  54%|█████▍    | 109/202 [02:00<01:54,  1.23s/it]Batches:  54%|█████▍    | 110/202 [02:01<01:59,  1.30s/it]Batches:  55%|█████▍    | 111/202 [02:02<01:59,  1.31s/it]Batches:  55%|█████▌    | 112/202 [02:04<01:56,  1.29s/it]Batches:  56%|█████▌    | 113/202 [02:05<01:55,  1.30s/it]Batches:  56%|█████▋    | 114/202 [02:06<01:53,  1.28s/it]Batches:  57%|█████▋    | 115/202 [02:08<01:53,  1.30s/it]Batches:  57%|█████▋    | 116/202 [02:09<01:51,  1.29s/it]Batches:  58%|█████▊    | 117/202 [02:10<01:53,  1.33s/it]Batches:  58%|█████▊    | 118/202 [02:12<01:50,  1.31s/it]Batches:  59%|█████▉    | 119/202 [02:13<01:49,  1.32s/it]Batches:  59%|█████▉    | 120/202 [02:14<01:43,  1.26s/it]Batches:  60%|█████▉    | 121/202 [02:15<01:41,  1.26s/it]Batches:  60%|██████    | 122/202 [02:16<01:37,  1.22s/it]Batches:  61%|██████    | 123/202 [02:17<01:32,  1.17s/it]Batches:  61%|██████▏   | 124/202 [02:18<01:23,  1.07s/it]Batches:  62%|██████▏   | 125/202 [02:19<01:13,  1.05it/s]Batches:  62%|██████▏   | 126/202 [02:20<01:10,  1.07it/s]Batches:  63%|██████▎   | 127/202 [02:21<01:07,  1.11it/s]Batches:  63%|██████▎   | 128/202 [02:21<01:02,  1.19it/s]Batches:  64%|██████▍   | 129/202 [02:22<01:05,  1.12it/s]Batches:  64%|██████▍   | 130/202 [02:23<01:00,  1.19it/s]Batches:  65%|██████▍   | 131/202 [02:24<00:59,  1.18it/s]Batches:  65%|██████▌   | 132/202 [02:25<00:59,  1.18it/s]Batches:  66%|██████▌   | 133/202 [02:26<00:59,  1.16it/s]Batches:  66%|██████▋   | 134/202 [02:27<00:57,  1.18it/s]Batches:  67%|██████▋   | 135/202 [02:27<00:56,  1.19it/s]Batches:  67%|██████▋   | 136/202 [02:28<00:55,  1.18it/s]Batches:  68%|██████▊   | 137/202 [02:29<00:55,  1.17it/s]Batches:  68%|██████▊   | 138/202 [02:30<00:55,  1.15it/s]Batches:  69%|██████▉   | 139/202 [02:31<00:50,  1.24it/s]Batches:  69%|██████▉   | 140/202 [02:31<00:50,  1.24it/s]Batches:  70%|██████▉   | 141/202 [02:32<00:50,  1.21it/s]Batches:  70%|███████   | 142/202 [02:33<00:45,  1.31it/s]Batches:  71%|███████   | 143/202 [02:34<00:44,  1.31it/s]Batches:  71%|███████▏  | 144/202 [02:34<00:43,  1.34it/s]Batches:  72%|███████▏  | 145/202 [02:35<00:42,  1.34it/s]Batches:  72%|███████▏  | 146/202 [02:36<00:40,  1.39it/s]Batches:  73%|███████▎  | 147/202 [02:37<00:39,  1.41it/s]Batches:  73%|███████▎  | 148/202 [02:37<00:39,  1.37it/s]Batches:  74%|███████▍  | 149/202 [02:38<00:36,  1.44it/s]Batches:  74%|███████▍  | 150/202 [02:38<00:32,  1.58it/s]Batches:  75%|███████▍  | 151/202 [02:39<00:34,  1.47it/s]Batches:  75%|███████▌  | 152/202 [02:40<00:35,  1.40it/s]Batches:  76%|███████▌  | 153/202 [02:41<00:33,  1.45it/s]Batches:  76%|███████▌  | 154/202 [02:41<00:32,  1.49it/s]Batches:  77%|███████▋  | 155/202 [02:42<00:29,  1.59it/s]Batches:  77%|███████▋  | 156/202 [02:43<00:32,  1.44it/s]Batches:  78%|███████▊  | 157/202 [02:43<00:29,  1.50it/s]Batches:  78%|███████▊  | 158/202 [02:44<00:25,  1.70it/s]Batches:  79%|███████▊  | 159/202 [02:44<00:28,  1.51it/s]Batches:  79%|███████▉  | 160/202 [02:45<00:24,  1.69it/s]Batches:  80%|███████▉  | 161/202 [02:45<00:23,  1.75it/s]Batches:  80%|████████  | 162/202 [02:46<00:22,  1.74it/s]Batches:  81%|████████  | 163/202 [02:46<00:20,  1.86it/s]Batches:  81%|████████  | 164/202 [02:47<00:21,  1.76it/s]Batches:  82%|████████▏ | 165/202 [02:48<00:19,  1.86it/s]Batches:  82%|████████▏ | 166/202 [02:48<00:18,  1.94it/s]Batches:  83%|████████▎ | 167/202 [02:49<00:19,  1.83it/s]Batches:  83%|████████▎ | 168/202 [02:49<00:19,  1.72it/s]Batches:  84%|████████▎ | 169/202 [02:50<00:19,  1.73it/s]Batches:  84%|████████▍ | 170/202 [02:50<00:17,  1.87it/s]Batches:  85%|████████▍ | 171/202 [02:51<00:16,  1.93it/s]Batches:  85%|████████▌ | 172/202 [02:51<00:15,  1.88it/s]Batches:  86%|████████▌ | 173/202 [02:52<00:15,  1.91it/s]Batches:  86%|████████▌ | 174/202 [02:52<00:14,  1.89it/s]Batches:  87%|████████▋ | 175/202 [02:53<00:13,  1.97it/s]Batches:  87%|████████▋ | 176/202 [02:53<00:14,  1.85it/s]Batches:  88%|████████▊ | 177/202 [02:54<00:13,  1.91it/s]Batches:  88%|████████▊ | 178/202 [02:55<00:13,  1.83it/s]Batches:  89%|████████▊ | 179/202 [02:55<00:12,  1.85it/s]Batches:  89%|████████▉ | 180/202 [02:55<00:10,  2.07it/s]Batches:  90%|████████▉ | 181/202 [02:56<00:08,  2.34it/s]Batches:  90%|█████████ | 182/202 [02:56<00:09,  2.11it/s]Batches:  91%|█████████ | 183/202 [02:57<00:09,  2.09it/s]Batches:  91%|█████████ | 184/202 [02:57<00:09,  1.99it/s]Batches:  92%|█████████▏| 185/202 [02:58<00:08,  2.06it/s]Batches:  92%|█████████▏| 186/202 [02:58<00:06,  2.30it/s]Batches:  93%|█████████▎| 187/202 [02:58<00:06,  2.49it/s]Batches:  93%|█████████▎| 188/202 [02:59<00:05,  2.61it/s]Batches:  94%|█████████▎| 189/202 [02:59<00:04,  2.63it/s]Batches:  94%|█████████▍| 190/202 [02:59<00:04,  2.72it/s]Batches:  95%|█████████▍| 191/202 [03:00<00:04,  2.62it/s]Batches:  95%|█████████▌| 192/202 [03:00<00:03,  2.77it/s]Batches:  96%|█████████▌| 193/202 [03:01<00:03,  2.74it/s]Batches:  96%|█████████▌| 194/202 [03:01<00:02,  2.80it/s]Batches:  97%|█████████▋| 195/202 [03:01<00:02,  3.17it/s]Batches:  97%|█████████▋| 196/202 [03:01<00:01,  3.51it/s]Batches:  98%|█████████▊| 197/202 [03:02<00:01,  3.67it/s]Batches:  98%|█████████▊| 198/202 [03:02<00:01,  3.98it/s]Batches:  99%|█████████▊| 199/202 [03:02<00:00,  3.91it/s]Batches:  99%|█████████▉| 200/202 [03:02<00:00,  3.88it/s]Batches: 100%|█████████▉| 201/202 [03:03<00:00,  3.84it/s]Batches: 100%|██████████| 202/202 [03:03<00:00,  1.10it/s]
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 4016.01it/s]
+completed 1 of 240
+completed 2 of 240
+completed 3 of 240
+completed 4 of 240
+completed 5 of 240
+completed 6 of 240
+completed 7 of 240
+completed 8 of 240
+completed 9 of 240
+completed 10 of 240
+completed 11 of 240
+completed 12 of 240
+completed 13 of 240
+completed 14 of 240
+completed 15 of 240
+completed 16 of 240
+completed 17 of 240
+completed 18 of 240
+completed 19 of 240
+completed 20 of 240
+completed 21 of 240
+completed 22 of 240
+completed 23 of 240
+completed 24 of 240
+completed 25 of 240
+completed 26 of 240
+completed 27 of 240
+completed 28 of 240
+completed 29 of 240
+completed 30 of 240
+completed 31 of 240
+completed 32 of 240
+completed 33 of 240
+completed 34 of 240
+completed 35 of 240
+completed 36 of 240
+completed 37 of 240
+completed 38 of 240
+completed 39 of 240
+completed 40 of 240
+completed 41 of 240
+completed 42 of 240
+completed 43 of 240
+completed 44 of 240
+completed 45 of 240
+completed 46 of 240
+completed 47 of 240
+completed 48 of 240
+completed 49 of 240
+completed 50 of 240
+completed 51 of 240
+completed 52 of 240
+completed 53 of 240
+completed 54 of 240
+completed 55 of 240
+completed 56 of 240
+completed 57 of 240
+completed 58 of 240
+completed 59 of 240
+completed 60 of 240
+completed 61 of 240
+completed 62 of 240
+completed 63 of 240
+completed 64 of 240
+completed 65 of 240
+completed 66 of 240
+completed 67 of 240
+completed 68 of 240
+completed 69 of 240
+completed 70 of 240
+completed 71 of 240
+completed 72 of 240
+completed 73 of 240
+completed 74 of 240
+completed 75 of 240
+completed 76 of 240
+completed 77 of 240
+completed 78 of 240
+completed 79 of 240
+completed 80 of 240
+completed 81 of 240
+completed 82 of 240
+completed 83 of 240
+completed 84 of 240
+completed 85 of 240
+completed 86 of 240
+completed 87 of 240
+completed 88 of 240
+completed 89 of 240
+completed 90 of 240
+completed 91 of 240
+completed 92 of 240
+completed 93 of 240
+completed 94 of 240
+completed 95 of 240
+completed 96 of 240
+completed 97 of 240
+completed 98 of 240
+completed 99 of 240
+completed 100 of 240
+completed 101 of 240
+completed 102 of 240
+completed 103 of 240
+completed 104 of 240
+completed 105 of 240
+completed 106 of 240
+completed 107 of 240
+completed 108 of 240
+completed 109 of 240
+completed 110 of 240
+completed 111 of 240
+completed 112 of 240
+completed 113 of 240
+completed 114 of 240
+completed 115 of 240
+completed 116 of 240
+completed 117 of 240
+completed 118 of 240
+completed 119 of 240
+completed 120 of 240
+completed 121 of 240
+completed 122 of 240
+completed 123 of 240
+completed 124 of 240
+completed 125 of 240
+completed 126 of 240
+completed 127 of 240
+completed 128 of 240
+completed 129 of 240
+completed 130 of 240
+completed 131 of 240
+completed 132 of 240
+completed 133 of 240
+completed 134 of 240
+completed 135 of 240
+completed 136 of 240
+completed 137 of 240
+completed 138 of 240
+completed 139 of 240
+completed 140 of 240
+completed 141 of 240
+completed 142 of 240
+completed 143 of 240
+completed 144 of 240
+completed 145 of 240
+completed 146 of 240
+completed 147 of 240
+completed 148 of 240
+completed 149 of 240
+completed 150 of 240
+completed 151 of 240
+completed 152 of 240
+completed 153 of 240
+completed 154 of 240
+completed 155 of 240
+completed 156 of 240
+completed 157 of 240
+completed 158 of 240
+completed 159 of 240
+completed 160 of 240
+completed 161 of 240
+completed 162 of 240
+completed 163 of 240
+completed 164 of 240
+completed 165 of 240
+completed 166 of 240
+completed 167 of 240
+completed 168 of 240
+completed 169 of 240
+completed 170 of 240
+completed 171 of 240
+completed 172 of 240
+completed 173 of 240
+completed 174 of 240
+completed 175 of 240
+completed 176 of 240
+completed 177 of 240
+completed 178 of 240
+completed 179 of 240
+completed 180 of 240
+completed 181 of 240
+completed 182 of 240
+completed 183 of 240
+completed 184 of 240
+completed 185 of 240
+completed 186 of 240
+completed 187 of 240
+completed 188 of 240
+completed 189 of 240
+completed 190 of 240
+completed 191 of 240
+completed 192 of 240
+completed 193 of 240
+completed 194 of 240
+completed 195 of 240
+completed 196 of 240
+completed 197 of 240
+completed 198 of 240
+completed 199 of 240
+completed 200 of 240
+completed 201 of 240
+completed 202 of 240
+completed 203 of 240
+completed 204 of 240
+completed 205 of 240
+completed 206 of 240
+completed 207 of 240
+completed 208 of 240
+completed 209 of 240
+completed 210 of 240
+completed 211 of 240
+completed 212 of 240
+completed 213 of 240
+completed 214 of 240
+completed 215 of 240
+completed 216 of 240
+completed 217 of 240
+completed 218 of 240
+completed 219 of 240
+completed 220 of 240
+completed 221 of 240
+completed 222 of 240
+completed 223 of 240
+completed 224 of 240
+completed 225 of 240
+completed 226 of 240
+completed 227 of 240
+completed 228 of 240
+completed 229 of 240
+completed 230 of 240
+completed 231 of 240
+completed 232 of 240
+completed 233 of 240
+completed 234 of 240
+completed 235 of 240
+completed 236 of 240
+completed 237 of 240
+completed 238 of 240
+completed 239 of 240
+completed 240 of 240

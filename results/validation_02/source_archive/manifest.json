@@ -1,0 +1,19 @@
+{
+  "e2e_start_saved": [
+    "src/check_token_budget.py",
+    "src/analyze.py",
+    "src/prepare.py",
+    "src/lexical_pilot.py",
+    "src/run.py",
+    "src/core.py",
+    "src/score_answers.py",
+    "src/generate.py",
+    "src/__init__.py",
+    "src/report_results.py",
+    "src/audit.py",
+    "src/answer_report.py",
+    "src/benchmark_e2e.py"
+  ],
+  "not_matching_start_hash": [],
+  "original_runner_reconstruction": "run_original.py matches original held-out metadata SHA256"
+}

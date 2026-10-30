@@ -1,0 +1,11 @@
+{
+  "reference_unchanged": true,
+  "unchanged_parts_verified": true,
+  "changed_parts": [
+    "[Content_Types].xml",
+    "word/_rels/document.xml.rels",
+    "word/document.xml",
+    "word/header1.xml"
+  ],
+  "body_word_count": 5522
+}

@@ -20,26 +20,7 @@ def tokens(text):
     return word_tokenize(text.lower(),engine='newmm',keep_whitespace=False)
 
 
-def main(config_path, output):
-    cfg=json.loads(Path(config_path).read_text()); out=Path(output); out.mkdir(parents=True,exist_ok=False)
-    data_dir=Path(cfg.get('data_dir','data/processed'))
-    source_hashes={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in Path('src').glob('*.py')}
-    if not (cfg['candidate_k'] >= cfg['k'] > 0 and cfg['repeats'] > 0):
-        raise ValueError('Require candidate_k >= k > 0 and repeats > 0')
-    random.seed(cfg['seed']); np.data_dir=Path(cfg.get('data_dir','data/processed'))
-    source_hashes={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in Path('src').glob('*.py')}
-    if not (cfg['candidate_k'] >= cfg['k'] > 0 and cfg['repeats'] > 0):
-        raise ValueError('Require candidate_k >= k > 0 and repeats > 0')
-    random.seed(cfg['seed']); torch.manual_seed(cfg['seed']); torch.set_num_threads(cfg['threads'])
-    docs=[json.loads(s) for s in (data_dir/'documents.jsonl').read_text().splitlines()]
-    queries=[json.loads(s) for s in (data_dir/'queries.jsonl').read_text().splitlines()]
-    queries=sorted((q for q in queries if q['split']==cfg['split']),key=lambda q:hashlib.sha256((str(cfg['seed'])+q['id']).encode()).hexdigest())
-    if cfg['query_limit']: queries=queries[:cfg['query_limit']]
-    if not queries: raise ValueError('No evaluation queries')
-    for key in ['embedding','reranker']:
-        if key+'_revision' not in cfg:
-            cfg[key+'_revision']=model_info(cfg[key+'_model']).sha
-    (out/'config.json').write_text(json.dumps(cfg,indent=2))
+def build_retriever(cfg,docs):
     start=time.perf_counter()
     encoder=SentenceTransformer(cfg['embedding_model'],revision=cfg['embedding_revision'],device=cfg['device'])
     encoder.max_seq_length=512
@@ -68,6 +49,26 @@ def main(config_path, output):
         return [docs[i]['id'] for i in ranked[:cfg['k']]], {'strategy':strategy,'features':features,
             'retrieval_seconds':time.perf_counter()-start,'cpu_seconds':time.process_time()-cpu_start,
             'router_seconds':routing_seconds if system.startswith('P1') else 0,'reranked_pairs':pairs}
+    return retrieve,setup_seconds
+
+
+def main(config_path, output):
+    cfg=json.loads(Path(config_path).read_text()); out=Path(output); out.mkdir(parents=True,exist_ok=False)
+    data_dir=Path(cfg.get('data_dir','data/processed'))
+    source_hashes={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in Path('src').glob('*.py')}
+    if not (cfg['candidate_k'] >= cfg['k'] > 0 and cfg['repeats'] > 0):
+        raise ValueError('Require candidate_k >= k > 0 and repeats > 0')
+    random.seed(cfg['seed']); np.random.seed(cfg['seed']); torch.manual_seed(cfg['seed']); torch.set_num_threads(cfg['threads'])
+    docs=[json.loads(s) for s in (data_dir/'documents.jsonl').read_text().splitlines()]
+    queries=[json.loads(s) for s in (data_dir/'queries.jsonl').read_text().splitlines()]
+    queries=sorted((q for q in queries if q['split']==cfg['split']),key=lambda q:hashlib.sha256((str(cfg['seed'])+q['id']).encode()).hexdigest())
+    if cfg['query_limit']: queries=queries[:cfg['query_limit']]
+    if not queries: raise ValueError('No evaluation queries')
+    for key in ['embedding','reranker']:
+        if key+'_revision' not in cfg:
+            cfg[key+'_revision']=model_info(cfg[key+'_model']).sha
+    (out/'config.json').write_text(json.dumps(cfg,indent=2))
+    retrieve,setup_seconds=build_retriever(cfg,docs)
     systems=['B1','B2','B3']+['P1:'+a for a in cfg['ablations']]
     for system in systems: retrieve(queries[0]['query'],system)
     with (out/'rows.jsonl').open('w') as f:

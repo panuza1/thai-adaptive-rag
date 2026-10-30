@@ -1,0 +1,101 @@
+[
+  {
+    "system": "B1",
+    "n_queries": 30,
+    "recall": 0.9333333333333333,
+    "mrr": 0.8861111111111111,
+    "ndcg": 0.8976892186024464,
+    "retrieval_seconds": 0.017701076133334936,
+    "router_seconds": 0.0,
+    "reranked_pairs": 0.0,
+    "latency_p95": 0.026152563300047404
+  },
+  {
+    "system": "B2",
+    "n_queries": 30,
+    "recall": 0.9666666666666667,
+    "mrr": 0.9333333333333333,
+    "ndcg": 0.9420619835714306,
+    "retrieval_seconds": 0.02750292930000645,
+    "router_seconds": 0.0,
+    "reranked_pairs": 0.0,
+    "latency_p95": 0.04296770559996047
+  },
+  {
+    "system": "B3",
+    "n_queries": 30,
+    "recall": 0.9666666666666667,
+    "mrr": 0.9666666666666667,
+    "ndcg": 0.9666666666666667,
+    "retrieval_seconds": 1.1858379497666798,
+    "router_seconds": 0.0,
+    "reranked_pairs": 20.0,
+    "latency_p95": 1.6526403906499239
+  },
+  {
+    "system": "P1:complexity",
+    "n_queries": 30,
+    "recall": 0.9666666666666667,
+    "mrr": 0.9666666666666667,
+    "ndcg": 0.9666666666666667,
+    "retrieval_seconds": 0.3481528932000174,
+    "router_seconds": 0.0002523001333353629,
+    "reranked_pairs": 5.333333333333333,
+    "latency_p95": 1.522726950999958
+  },
+  {
+    "system": "P1:confidence",
+    "n_queries": 30,
+    "recall": 0.9333333333333333,
+    "mrr": 0.8861111111111111,
+    "ndcg": 0.8976892186024464,
+    "retrieval_seconds": 0.019736448833327813,
+    "router_seconds": 0.00024104559995521412,
+    "reranked_pairs": 0.0,
+    "latency_p95": 0.03014919985000687
+  },
+  {
+    "system": "P1:hybrid",
+    "n_queries": 30,
+    "recall": 0.9666666666666667,
+    "mrr": 0.9666666666666667,
+    "ndcg": 0.9666666666666667,
+    "retrieval_seconds": 0.35911984733334823,
+    "router_seconds": 0.00024688969999715483,
+    "reranked_pairs": 5.333333333333333,
+    "latency_p95": 1.6650703958000803
+  },
+  {
+    "system": "P1:keyword",
+    "n_queries": 30,
+    "recall": 0.9666666666666667,
+    "mrr": 0.9666666666666667,
+    "ndcg": 0.9666666666666667,
+    "retrieval_seconds": 0.352828894499991,
+    "router_seconds": 0.00024197516665177925,
+    "reranked_pairs": 5.333333333333333,
+    "latency_p95": 1.498904572450021
+  },
+  {
+    "system": "P1:none",
+    "n_queries": 30,
+    "recall": 0.9666666666666667,
+    "mrr": 0.9666666666666667,
+    "ndcg": 0.9666666666666667,
+    "retrieval_seconds": 0.36833684560000773,
+    "router_seconds": 0.0002599893333505558,
+    "reranked_pairs": 5.333333333333333,
+    "latency_p95": 1.7190330559998863
+  },
+  {
+    "system": "P1:reranking",
+    "n_queries": 30,
+    "recall": 0.9666666666666667,
+    "mrr": 0.9333333333333333,
+    "ndcg": 0.9420619835714306,
+    "retrieval_seconds": 0.02267141706667341,
+    "router_seconds": 0.00024756279999564866,
+    "reranked_pairs": 0.0,
+    "latency_p95": 0.03793395780010086
+  }
+]

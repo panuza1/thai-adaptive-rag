@@ -1,0 +1,639 @@
+{
+  "source": "results/heldout_01",
+  "queries": 60,
+  "groups": 55,
+  "bootstrap_replicates": 2000,
+  "seed": 2027,
+  "unit": "article-group clusters; paired queries retained; retrieval repeats averaged within query",
+  "summary": {
+    "B1": {
+      "recall": {
+        "mean": {
+          "estimate": 0.95,
+          "ci95": [
+            0.8888888888888888,
+            1.0
+          ]
+        },
+        "median": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "p95": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "ndcg": {
+        "mean": {
+          "estimate": 0.9232131543452395,
+          "ci95": [
+            0.8597456095982161,
+            0.9771915141322457
+          ]
+        },
+        "median": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "p95": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "retrieval_seconds": {
+        "mean": {
+          "estimate": 0.017493271977783328,
+          "ci95": [
+            0.016919786493822368,
+            0.018100139609792436
+          ]
+        },
+        "median": {
+          "estimate": 0.017783195666690215,
+          "ci95": [
+            0.016567557333284338,
+            0.018175779499908156
+          ]
+        },
+        "p95": {
+          "estimate": 0.02088007976666025,
+          "ci95": [
+            0.02020232891671109,
+            0.022031270183371508
+          ]
+        }
+      }
+    },
+    "B2": {
+      "recall": {
+        "mean": {
+          "estimate": 0.9666666666666667,
+          "ci95": [
+            0.9137931034482759,
+            1.0
+          ]
+        },
+        "median": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "p95": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "ndcg": {
+        "mean": {
+          "estimate": 0.9263231478741808,
+          "ci95": [
+            0.8626538676749541,
+            0.9759823624497147
+          ]
+        },
+        "median": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "p95": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "retrieval_seconds": {
+        "mean": {
+          "estimate": 0.025102956261107714,
+          "ci95": [
+            0.023844782787531445,
+            0.02664350889985068
+          ]
+        },
+        "median": {
+          "estimate": 0.02443998966661335,
+          "ci95": [
+            0.02390589840410087,
+            0.025209513333417515
+          ]
+        },
+        "p95": {
+          "estimate": 0.03179688133327545,
+          "ci95": [
+            0.029043768333319047,
+            0.03661246753332909
+          ]
+        }
+      }
+    },
+    "B3": {
+      "recall": {
+        "mean": {
+          "estimate": 0.9833333333333333,
+          "ci95": [
+            0.9482758620689655,
+            1.0
+          ]
+        },
+        "median": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "p95": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "ndcg": {
+        "mean": {
+          "estimate": 0.9314178688405437,
+          "ci95": [
+            0.8773849503604635,
+            0.9736522829625307
+          ]
+        },
+        "median": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "p95": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "retrieval_seconds": {
+        "mean": {
+          "estimate": 1.0511336600222245,
+          "ci95": [
+            1.010335005304457,
+            1.0916158813071275
+          ]
+        },
+        "median": {
+          "estimate": 1.0380960026666723,
+          "ci95": [
+            0.999425905833353,
+            1.1066171025000435
+          ]
+        },
+        "p95": {
+          "estimate": 1.2693221529167165,
+          "ci95": [
+            1.2258689874754511,
+            1.4392581939000213
+          ]
+        }
+      }
+    },
+    "P1:none": {
+      "recall": {
+        "mean": {
+          "estimate": 0.9833333333333333,
+          "ci95": [
+            0.9482758620689655,
+            1.0
+          ]
+        },
+        "median": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "p95": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "ndcg": {
+        "mean": {
+          "estimate": 0.9230845355072103,
+          "ci95": [
+            0.86687905079683,
+            0.9687202766402616
+          ]
+        },
+        "median": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "p95": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "retrieval_seconds": {
+        "mean": {
+          "estimate": 0.20128874995554547,
+          "ci95": [
+            0.10386235986479306,
+            0.30812887000683165
+          ]
+        },
+        "median": {
+          "estimate": 0.01821584316667213,
+          "ci95": [
+            0.017697616999915528,
+            0.019013618166657885
+          ]
+        },
+        "p95": {
+          "estimate": 1.1702498836000583,
+          "ci95": [
+            0.8992773383617068,
+            1.3221852553999531
+          ]
+        }
+      }
+    }
+  },
+  "paired": [
+    {
+      "comparison": "B1 - B2",
+      "metric": "recall",
+      "mean_difference": -0.016666666666666666,
+      "mean_difference_ci95": [
+        -0.05,
+        0.0
+      ],
+      "median_difference": 0.0,
+      "median_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "p95_difference": 0.0,
+      "p95_difference_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "comparison": "B1 - B2",
+      "metric": "ndcg",
+      "mean_difference": -0.0031099935289412867,
+      "mean_difference_ci95": [
+        -0.04015373299031427,
+        0.03593402761820425
+      ],
+      "median_difference": 0.0,
+      "median_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "p95_difference": 0.0,
+      "p95_difference_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "comparison": "B1 - B2",
+      "metric": "retrieval_seconds",
+      "mean_difference": -0.007609684283324391,
+      "mean_difference_ci95": [
+        -0.008713145388152495,
+        -0.0066911808493653226
+      ],
+      "median_difference": -0.006656793999923135,
+      "median_difference_ci95": [
+        -0.008005220000162204,
+        -0.0061180519749105605
+      ],
+      "p95_difference": -0.0109168015666152,
+      "p95_difference_ci95": [
+        -0.014581197349957584,
+        -0.008351491491722153
+      ]
+    },
+    {
+      "comparison": "B1 - B3",
+      "metric": "recall",
+      "mean_difference": -0.03333333333333333,
+      "mean_difference_ci95": [
+        -0.08333333333333333,
+        0.0
+      ],
+      "median_difference": 0.0,
+      "median_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "p95_difference": 0.0,
+      "p95_difference_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "comparison": "B1 - B3",
+      "metric": "ndcg",
+      "mean_difference": -0.008204714495304062,
+      "mean_difference_ci95": [
+        -0.04190869401240051,
+        0.02599512293589235
+      ],
+      "median_difference": 0.0,
+      "median_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "p95_difference": 0.0,
+      "p95_difference_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "comparison": "B1 - B3",
+      "metric": "retrieval_seconds",
+      "mean_difference": -1.0336403880444411,
+      "mean_difference_ci95": [
+        -1.0739383550881625,
+        -0.993092542768822
+      ],
+      "median_difference": -1.020312806999982,
+      "median_difference_ci95": [
+        -1.0884679397458865,
+        -0.9824570446291981
+      ],
+      "p95_difference": -1.2484420731500563,
+      "p95_difference_ci95": [
+        -1.4183441133333567,
+        -1.2050962985317237
+      ]
+    },
+    {
+      "comparison": "B1 - P1:none",
+      "metric": "recall",
+      "mean_difference": -0.03333333333333333,
+      "mean_difference_ci95": [
+        -0.08333333333333333,
+        0.0
+      ],
+      "median_difference": 0.0,
+      "median_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "p95_difference": 0.0,
+      "p95_difference_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "comparison": "B1 - P1:none",
+      "metric": "ndcg",
+      "mean_difference": 0.00012861883802927075,
+      "mean_difference_ci95": [
+        -0.03008951043333111,
+        0.03243518031061509
+      ],
+      "median_difference": 0.0,
+      "median_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "p95_difference": 0.0,
+      "p95_difference_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "comparison": "B1 - P1:none",
+      "metric": "retrieval_seconds",
+      "mean_difference": -0.1837954779777622,
+      "mean_difference_ci95": [
+        -0.2903058621966694,
+        -0.08629132145282635
+      ],
+      "median_difference": -0.0004326474999819148,
+      "median_difference_ci95": [
+        -0.0019021403332620465,
+        5.906454172190629e-05
+      ],
+      "p95_difference": -1.1493698038333982,
+      "p95_difference_ci95": [
+        -1.3001539852165815,
+        -0.8785192064483972
+      ]
+    },
+    {
+      "comparison": "B2 - B3",
+      "metric": "recall",
+      "mean_difference": -0.016666666666666666,
+      "mean_difference_ci95": [
+        -0.05172413793103448,
+        0.0
+      ],
+      "median_difference": 0.0,
+      "median_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "p95_difference": 0.0,
+      "p95_difference_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "comparison": "B2 - B3",
+      "metric": "ndcg",
+      "mean_difference": -0.005094720966362776,
+      "mean_difference_ci95": [
+        -0.047857189381000045,
+        0.034095069517198005
+      ],
+      "median_difference": 0.0,
+      "median_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "p95_difference": 0.0,
+      "p95_difference_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "comparison": "B2 - B3",
+      "metric": "retrieval_seconds",
+      "mean_difference": -1.0260307037611167,
+      "mean_difference_ci95": [
+        -1.0661079587515003,
+        -0.9861588643824609
+      ],
+      "median_difference": -1.013656013000059,
+      "median_difference_ci95": [
+        -1.0812751849500437,
+        -0.9749546733292381
+      ],
+      "p95_difference": -1.237525271583441,
+      "p95_difference_ci95": [
+        -1.4064705413333436,
+        -1.1946738011491504
+      ]
+    },
+    {
+      "comparison": "B2 - P1:none",
+      "metric": "recall",
+      "mean_difference": -0.016666666666666666,
+      "mean_difference_ci95": [
+        -0.05172413793103448,
+        0.0
+      ],
+      "median_difference": 0.0,
+      "median_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "p95_difference": 0.0,
+      "p95_difference_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "comparison": "B2 - P1:none",
+      "metric": "ndcg",
+      "mean_difference": 0.0032386123669705578,
+      "mean_difference_ci95": [
+        -0.04121217955197717,
+        0.044289060059101965
+      ],
+      "median_difference": 0.0,
+      "median_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "p95_difference": 0.0,
+      "p95_difference_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "comparison": "B2 - P1:none",
+      "metric": "retrieval_seconds",
+      "mean_difference": -0.17618579369443782,
+      "mean_difference_ci95": [
+        -0.2823663327640777,
+        -0.07898794957724709
+      ],
+      "median_difference": 0.00622414649994122,
+      "median_difference_ci95": [
+        0.005282703666656136,
+        0.0071164194875905215
+      ],
+      "p95_difference": -1.138453002266783,
+      "p95_difference_ci95": [
+        -1.285572787866624,
+        -0.8675097572250978
+      ]
+    },
+    {
+      "comparison": "B3 - P1:none",
+      "metric": "recall",
+      "mean_difference": 0.0,
+      "mean_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "median_difference": 0.0,
+      "median_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "p95_difference": 0.0,
+      "p95_difference_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "comparison": "B3 - P1:none",
+      "metric": "ndcg",
+      "mean_difference": 0.008333333333333333,
+      "mean_difference_ci95": [
+        0.0,
+        0.023433143231290723
+      ],
+      "median_difference": 0.0,
+      "median_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "p95_difference": 0.0,
+      "p95_difference_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "comparison": "B3 - P1:none",
+      "metric": "retrieval_seconds",
+      "mean_difference": 0.849844910066679,
+      "mean_difference_ci95": [
+        0.7423371452971438,
+        0.9470451210926093
+      ],
+      "median_difference": 1.0198801595000002,
+      "median_difference_ci95": [
+        0.9812152101916779,
+        1.0876328492917064
+      ],
+      "p95_difference": 0.09907226931665813,
+      "p95_difference_ci95": [
+        -0.046203186483262604,
+        0.34031806011658683
+      ]
+    }
+  ],
+  "limitations": "Exploratory percentile intervals, no multiplicity correction or formal hypothesis tests; no significance/equivalence claims. p95 depends on few observations; single-session variability is not cross-session reproducibility."
+}

@@ -1,0 +1,783 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\usepackage{mathptmx}
+\usepackage[a4paper,left=20mm,right=20mm,top=25mm,bottom=25mm,columnsep=6mm]{geometry}
+\usepackage{graphicx,booktabs,array,tabularx,multicol}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{titlesec}
+\usepackage[font=footnotesize,labelfont=normalfont,labelsep=period]{caption}
+\usepackage[hidelinks,breaklinks,pdfauthor={},pdftitle={Adaptive Retrieval Strategy for Cost-Efficient and Reliable Thai RAG Systems}]{hyperref}
+\usepackage{xurl}
+\pagestyle{empty}
+\setlength{\parindent}{4mm}
+\setlength{\parskip}{2pt}
+\setcounter{secnumdepth}{2}
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\Alph{subsection}}
+\titleformat{\section}{\centering\bfseries\normalsize}{\thesection.}{.5em}{\MakeUppercase}
+\titleformat{\subsection}{\bfseries\itshape\normalsize}{\thesubsection.}{.4em}{}
+\titlespacing*{\section}{0pt}{12pt}{8pt}
+\titlespacing*{\subsection}{0pt}{8pt}{4pt}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\bibsep}{4pt}
+\sloppy
+\begin{document}
+\twocolumn[\vspace*{5mm}\begin{center}
+{\fontsize{14}{17}\selectfont\bfseries ADAPTIVE RETRIEVAL STRATEGY FOR COST-EFFICIENT AND RELIABLE THAI RAG SYSTEMS\par}
+\vspace{12pt}{\fontsize{12}{14}\selectfont Anonymous review manuscript\par}\vspace{12pt}
+\end{center}]
+\hypertarget{abstract}{%
+\section*{Abstract}\label{abstract}}
+
+Uniform neural reranking may waste computation in retrieval-augmented
+generation. We evaluate an interpretable router selecting dense, hybrid,
+or hybrid-plus-reranking retrieval for Thai question answering. A frozen
+experiment uses 60 held-out questions from 55 article groups, a shared
+corpus of 3,223 chunks, and three retrieval timing repetitions. The
+router achieves Recall@5 of 0.9833, matching always-reranking, while
+reducing mean retrieval latency from 1.0511 to 0.2013 seconds, including
+routing overhead. However, nDCG@5 decreases from 0.9314 to 0.9231, and
+dense and hybrid baselines remain faster. Removing reranking improves
+the router's observed nDCG to 0.9399. Direct mean request latency is
+42.489 seconds for the router and 42.141 seconds for always-reranking,
+with uncertainty spanning zero difference. Independent
+semantic-correctness and faithfulness judgments remain pending. These
+results support a limited retrieval-efficiency tradeoff, not general
+superiority, answer non-inferiority, or hallucination reduction.
+
+\textbf{Keywords:} Thai question answering; retrieval-augmented
+generation; adaptive retrieval; hybrid retrieval; computational
+efficiency.
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+Retrieval-augmented generation combines parametric language models with
+external evidence \citep{ref1}. Retrieval can fail through lexical
+mismatch, semantic ambiguity, or poorly ranked evidence. Dense passage
+retrieval provides a learned semantic representation \citep{ref2}, while
+lexical retrieval preserves exact-term signals \citep{ref3}. Combining
+these approaches and adding a cross encoder can improve evidence ranking
+but introduces additional computation.
+
+A fixed expensive pipeline may be unnecessary for some questions, but an
+adaptive pipeline also incurs decision overhead. The relevant research
+question is therefore whether query-adaptive selection can reduce
+measured costs while preserving answer quality and evidence-grounded
+reliability in Thai. This study focuses on an experimentally testable
+tradeoff. We do not introduce adaptive retrieval as a new concept.
+
+\hypertarget{research-questions-and-scope}{%
+\subsection{Research questions and
+scope}\label{research-questions-and-scope}}
+
+We distinguish three questions. First, does routing reduce warm
+retrieval effort relative to the most expensive fixed pipeline while
+preserving retrieval quality? Second, does any retrieval-stage saving
+survive once a shared generator produces the answer? Third, do retrieved
+passages support the generated claims, independently of whether a short
+reference string appears in the response? These questions require
+different observations. A faster retrieval call does not establish a
+faster complete request, and a relevant passage does not establish a
+faithful answer.
+
+The working hypothesis is a conditional tradeoff: selective reranking
+can avoid unnecessary cross-encoder work, but may lose evidence quality
+when the decision features are weak. A stronger hypothesis that routing
+simultaneously improves ranking, answer correctness, faithfulness and
+cost is not assumed. We report unfavorable comparisons and ablations
+because they identify the boundary of the proposed decision mechanism.
+Reliability remains an evaluation objective, rather than an achieved
+property asserted by the project title.
+
+The study is deliberately limited to a transparent three-action policy
+on one Thai corpus and a modest local model configuration. Its empirical
+contribution consists of matched baselines, explicit decision overhead,
+a reproducible split and query manifest, and a diagnosis of
+disagreements between derived relevance and passage content. This scope
+does not establish a first adaptive RAG method or a general optimum for
+Thai retrieval. It also does not replace specialist domain evaluation in
+law, medicine or other high-stakes applications.
+
+\hypertarget{related-work}{%
+\section{Related Work}\label{related-work}}
+
+RRF combines rankings without requiring score calibration \citep{ref4},
+although subsequent analysis shows that fusion behavior depends on
+parameters and tuned score combinations can be stronger \citep{ref5}.
+Cross-encoder reranking jointly processes query and passage
+\citep{ref6}. These methods motivate the fixed retrieval baselines.
+
+Adaptive-RAG learns to choose retrieval effort from question complexity
+\citep{ref7}. Self-RAG integrates retrieval and reflection decisions
+into generation \citep{ref8}. MBA-RAG makes cost-sensitive retrieval
+choices through a bandit formulation \citep{ref9}. External-feature
+adaptive retrieval also predates this study \citep{ref10}. Thus, the
+candidate contribution is a controlled Thai evaluation of transparent
+A/B/C routing and its overhead, rather than an unrestricted novelty
+claim. MIRACL provides a complementary multilingual retrieval benchmark
+\citep{ref11}. Ragas motivates separate evaluation of retrieval
+relevance and grounded generation \citep{ref12}, but automatic judgments
+require Thai-specific validation.
+
+Thai-specific work further constrains novelty. Similarity-based Thai QA
+has measured quality and runtime \citep{ref13}. Thai legal RAG has
+combined sparse/dense retrieval and neural reranking \citep{ref14}. A
+recent Thai Royal Gazette study compares retrieval units and methods
+with span-level evidence judgments \citep{ref15}. TSWAP includes
+query-dependent forced retrieval for Thai entity lookups \citep{ref16}.
+These precedents mean that neither Thai hybrid retrieval nor Thai
+query-dependent retrieval can be claimed as new. Our proposed
+contribution remains a narrowly controlled evaluation of discrete
+strategy selection and its measured costs.
+
+\hypertarget{position-relative-to-earlier-adaptive-systems}{%
+\subsection{Position relative to earlier adaptive
+systems}\label{position-relative-to-earlier-adaptive-systems}}
+
+The action space is a central distinction. Systems that decide whether
+to retrieve at all, whether to perform multiple retrieval rounds, or
+whether to reflect on an answer address different decisions from
+choosing among three retrieval implementations for a single evidence
+budget. Our policy always performs an initial dense search. This imposes
+a minimum query-encoding cost even when lexical evidence is useful, but
+also makes the dense score margin available without a second search. The
+comparison therefore evaluates selective additional work after dense
+retrieval, not arbitrary selection among independently priced black-box
+systems.
+
+External-feature routing is close prior work and limits claims about
+novelty \citep{ref10}. Query length and lexical indicators are
+inexpensive signals, but cheap observability does not establish that
+they predict the marginal benefit of a cross encoder. The present
+evaluation consequently treats the features as hypotheses and tests
+their removal. We do not infer novelty from using Thai text alone.
+Existing Thai hybrid and reranking studies \citep{ref14}, and Thai
+query-dependent retrieval \citep{ref16}, already occupy important parts
+of that design space.
+
+Evaluation design is equally consequential. MIRACL provides a
+multilingual retrieval resource \citep{ref11}, while the Thai Royal
+Gazette study uses evidence spans to compare retrieval units
+\citep{ref15}. Our source-span conversion is operationally simple but
+does not provide exhaustive pooled relevance. A second benchmark with
+independently judged evidence would be required to establish whether
+observed policy behavior transfers beyond Wikipedia-derived factoid
+questions. Ragas \citep{ref12} provides an automated evaluation
+framework, but using its terminology or an unvalidated judge would not
+supply independent Thai human evidence for this experiment.
+
+\hypertarget{proposed-method}{%
+\section{Proposed Method}\label{proposed-method}}
+
+Given query q, compute a normalized dense embedding and cosine scores
+against a fixed chunk index. Reuse this search if further processing is
+selected. Extract Thai-token count, an exact-token proxy indicating
+digits/Latin strings/quotation marks, and the score margin between the
+first two dense candidates.
+
+A provisional deterministic policy selects reranking when the query is
+long or the margin is small; otherwise it selects hybrid retrieval for
+exact-token queries and dense retrieval for remaining queries. The fixed
+thresholds are 24 Thai tokens and a cosine-score margin of 0.02. They
+were frozen before test access and were not calibrated on test outcomes.
+Neither token length nor margin is a validated measure of reasoning
+complexity or correctness. The selected pipeline returns the same number
+of evidence chunks as every baseline.
+
+Hybrid retrieval uses RRF over truncated BM25 and dense rankings.
+Reranking applies a shared multilingual cross encoder to the fused
+candidate list. The no-hybrid ablation uses dense candidates for
+reranking. Feature ablations suppress one decision input at a time. All
+query-side work is included in online retrieval timing.
+
+\hypertarget{retrieval-and-fusion-procedure}{%
+\subsection{Retrieval and fusion
+procedure}\label{retrieval-and-fusion-procedure}}
+
+Let D be the fixed passage collection and q the query. The dense encoder
+maps the prefixed query and passages to normalized vectors. Passage
+scores are dot products, equivalent to cosine similarities under
+normalization. Dense retrieval returns the highest-scoring candidates
+with a stable tie rule. BM25 operates on lowercased Thai newmm tokens.
+Sparse and dense candidate lists each contain at most 20 passages.
+Reciprocal-rank fusion assigns each candidate the sum of 1/(60 + rank)
+over lists in which it appears. The fused list is truncated to 20
+candidates before optional reranking.
+
+The cross encoder scores query--passage pairs jointly and orders the
+same candidate set; it does not retrieve unseen passages. Every strategy
+returns five passages to generation. Consequently, differences in
+answers can arise from which passages appear and their order, although
+the passage-count budget is fixed. Character lengths and generator token
+counts can still differ across strategies, so equal K does not imply
+equal input-token cost. Token counts are measured rather than inferred
+from the evidence count.
+
+\hypertarget{transparent-decision-rule}{%
+\subsection{Transparent decision
+rule}\label{transparent-decision-rule}}
+
+Define L as the Thai-token count, E as the presence of a digit, Latin
+character or quotation mark, and M as the difference between the top two
+dense scores. The policy chooses C when L is at least 24 or M is below
+0.02; otherwise it chooses B when E is true, and A in the remaining
+cases. The order is consequential: a low-margin exact-token query
+selects C before the lexical indicator is considered. The rule does not
+use answer labels, source titles, reference strings or generated text as
+inputs.
+
+The name ``complexity'' refers only to a length proxy. The
+implementation does not estimate reasoning steps, named entities or
+semantic ambiguity directly. In particular, a Thai name need not trigger
+the Latin/digit/quote indicator, and two overlapping answer-bearing
+passages can produce a small dense margin without indicating difficulty.
+These limitations are part of the method rather than hidden assumptions
+about feature validity.
+
+\hypertarget{ablation-controls-and-implementation}{%
+\subsection{Ablation controls and
+implementation}\label{ablation-controls-and-implementation}}
+
+Each ablation removes exactly one component from the fixed policy.
+Removing length, exact-token indicators or margin suppresses the
+corresponding condition. Removing hybrid retrieval replaces B by A and
+uses dense candidates for C reranking. Removing reranking maps C to B.
+These are policy interventions; they need not preserve route frequencies
+or candidate sets. We therefore report both quality and actual effort,
+and do not treat every ablation as an equal-cost comparison.
+
+The code uses a single shared retrieval implementation for the original
+runner and the integrated latency benchmark. Extraction of the retrieval
+function changes its callable scope without changing scoring, fusion,
+model revisions, thresholds or tie handling. The integrated run records
+parity with prior rankings and answers. Random seeds, source hashes,
+dataset hashes, package versions and the evaluation schedule accompany
+raw outputs. Assertions reject incomplete paired analyses instead of
+silently reporting a subset as the planned experiment.
+
+\hypertarget{experimental-setup}{%
+\section{Experimental Setup}\label{experimental-setup}}
+
+The initial corpus derives from the training partition of the public
+iApp Thai Wikipedia QA repository \citep{ref17}. We validate answer
+offsets, deduplicate exact normalized questions, and partition connected
+components of identical normalized titles or contexts by a deterministic
+hash. The fixed retrieval corpus includes all source contexts, while
+evaluation labels remain partitioned. Identical contexts cannot cross
+partitions. A corpus-only audit identified duplicate-title/context
+pairs, which were joined before the frozen evaluation. Three
+distinct-entity template pairs remain a near-duplicate sensitivity
+concern; model-pretraining contamination remains unknown.
+
+B1, B2, B3 and P1 share multilingual E5 small embeddings, the corpus,
+chunking and retrieval budget. B3/P1 share a multilingual mMiniLM cross
+encoder. Local generation is implemented using a fixed instruction
+model, common Thai prompt and deterministic decoding. Model identities
+and resolved revisions are recorded by the runner. The initial generator
+is resource-driven and requires Thai suitability validation.
+
+Recall@5, MRR@5 and binary nDCG@5 quantify derived span relevance.
+Strict normalized exact match and human semantic correctness evaluate
+answers. Independent Thai annotators will label atomic claims for
+support and contradiction; abstention evaluation requires validated
+unanswerable examples. Wall latency, process CPU time, reranked pairs
+and generator token counts quantify efficiency. Bootstrap intervals
+resample source-context groups while retaining paired system outputs. A
+proposed 0.03 correctness non-inferiority margin was not finalized as a
+confirmatory test. No answer non-inferiority claim is made. The present
+analysis is exploratory; further tuning must use development/validation
+data and a new untouched evaluation sample.
+
+Hardware detected: Intel Core i5-12450H, approximately 32 GiB system
+RAM, NVIDIA RTX 3050 laptop-class GPU with 4 GiB VRAM. The initial
+retrieval configuration uses CPU inference with four torch threads. This
+hardware statement is environment evidence, not a performance
+measurement.
+
+\hypertarget{dataset-provenance-and-leakage-controls}{%
+\subsection{Dataset provenance and leakage
+controls}\label{dataset-provenance-and-leakage-controls}}
+
+Only the pinned upstream training file is used to construct the custom
+research partitions. Each retained question has a validated source
+answer offset and a nonempty set of chunks fully covering that source
+span. NFC normalization, zero-width-space removal and whitespace
+normalization are applied to text. Chunking uses raw character windows
+of 600 characters with 100-character overlap, and identifiers combine
+the raw-context hash and offset. This prevents distinct raw whitespace
+variants from overwriting one another before normalized grouping.
+
+Questions are deduplicated by normalized question text. Contexts sharing
+a normalized title or normalized text are joined into connected
+components before a deterministic hash allocates groups to development,
+validation or test. Article groups do not cross partitions. The shared
+corpus includes contexts associated with every partition, as in
+open-book retrieval, while test questions and answer labels do not
+select thresholds. Access to test documents is therefore permitted by
+design; using test answer labels to fit a router would not be.
+
+The test query manifest contains 60 predetermined questions selected by
+seeded hash order, rather than by performance or ease. It covers 55
+article groups, so treating all questions as independent would ignore
+within-article dependence. The final test partition has additional
+unused questions, but evaluating only this fixed sample limits precision
+and coverage. The sample is not described as a full benchmark
+evaluation. Hash-based grouping reduces known leakage paths but cannot
+identify every paraphrase, template similarity or occurrence in
+pretrained model data.
+
+\hypertarget{models-and-resource-controls}{%
+\subsection{Models and resource
+controls}\label{models-and-resource-controls}}
+
+The dense model is intfloat/multilingual-e5-small at revision
+\texttt{614241f6\allowbreak{}22f53c4e\allowbreak{}eff9890b\allowbreak{}dc4f31cf\allowbreak{}ecc418b3}. The reranker is
+cross-encoder/mmarco-mMiniLMv2-L12-H384-v1 at revision
+\texttt{1427fd65\allowbreak{}2930e4ba\allowbreak{}29e81496\allowbreak{}78df786c\allowbreak{}240d8825}. The generator is
+Qwen/Qwen2.5-0.5B-Instruct at revision
+\texttt{7ae55760\allowbreak{}4adf67be\allowbreak{}50417f59\allowbreak{}c2c2f167\allowbreak{}def9a775}. These revisions,
+rather than mutable model names alone, define the experiment. Downloaded
+E5 and generator weight files pass recorded SHA256 checks. The local
+generator is chosen for feasibility, not on evidence that it is the
+strongest Thai model.
+
+The generation prompt instructs the model to answer in Thai using only
+the supplied evidence, cite passage identifiers and abstain when
+evidence is insufficient. It also instructs the model not to follow
+instructions embedded in evidence. Decoding is greedy with a maximum of
+128 new tokens and a 4,096-token request budget. Exceeding the budget
+raises an error rather than introducing method-specific truncation. Long
+passage identifiers are retained across all systems for consistency;
+their cost is a limitation to address only in a future development
+protocol.
+
+\hypertarget{measurement-boundaries}{%
+\subsection{Measurement boundaries}\label{measurement-boundaries}}
+
+The initial retrieval experiment measures query encoding, score
+computation, optional BM25/fusion, routing and reranking within each
+retrieval call. System order is shuffled for each query and timing
+repetition. Corpus encoding and index construction are setup operations,
+reported separately. All experiments use local inference, so external
+API charges are zero; this excludes electricity and hardware
+amortization. CPU process time counts processor time across threads and
+is not identical to elapsed wall time.
+
+A follow-up integrated benchmark executes a complete request rather than
+reusing saved retrieval outputs. Its timer starts before query encoding
+and ends after final answer decoding. The interval contains routing,
+retrieval, reranking, evidence lookup and assembly, chat-template
+processing, tokenization and generation. Model/index loading and file
+logging are outside the request interval. Each system is warmed on a
+development query. The frozen test query order is randomized, and
+four-query blocks balance each system's position within a query. This
+benchmark makes one request per method per question; it cannot estimate
+repeated-request jitter for a single question or production queueing
+delay.
+
+\hypertarget{statistical-estimands}{%
+\subsection{Statistical estimands}\label{statistical-estimands}}
+
+Recall@5 is the fraction of labeled relevant chunks retrieved within the
+first five positions. MRR@5 uses the reciprocal position of the first
+labeled relevant chunk, or zero if absent. Binary nDCG@5 discounts each
+labeled hit by its rank and normalizes by the ideal ranking. Unjudged
+passages are treated as nonrelevant in these computations; the resulting
+incompleteness is investigated rather than concealed. Retrieval timing
+repeats are averaged within query before paired comparisons, avoiding
+threefold inflation of the quality sample size.
+
+For uncertainty, 2,000 bootstrap replicates sample the 55 article groups
+with replacement and retain all associated query pairs. The same
+resampled indices are applied to every system. We report percentile
+intervals for mean differences in Recall@5, nDCG@5 and latency. Mean,
+median and p95 latency are also reported with cluster intervals;
+differences of medians and p95 values are distinct from quantiles of
+per-query differences. Tail estimates are unstable with only 60
+observations. The analysis is exploratory, without multiplicity-adjusted
+hypothesis tests, and does not declare statistical significance or
+non-inferiority from overlapping or nonoverlapping intervals alone.
+
+\hypertarget{independent-answer-evaluation-protocol}{%
+\subsection{Independent answer evaluation
+protocol}\label{independent-answer-evaluation-protocol}}
+
+A fixed blinded packet contains all 240 original responses, their
+questions, reference answers and retrieved evidence, identified only by
+opaque response IDs. Method names, routes, timings and retrieval scores
+are omitted. A separate coordinator mapping permits linkage after
+annotation. Two Thai-proficient raters should independently judge
+semantic correctness and segment factual claims, recording supporting
+passage IDs and rationales. Independent raters are not yet available;
+all human labels therefore remain missing, not correct, incorrect or
+faithful by default.
+
+Correctness permits paraphrase and equivalent values but rejects a
+materially wrong answer or misleading additional assertions. Ambiguous
+questions and defective references receive an uncertainty flag for
+adjudication. Claim support distinguishes entailed, contradicted,
+unsupported and uncertain claims. A factually correct claim can be
+ungrounded in the supplied passages, and a claim faithfully copied from
+the wrong entity's passage can fail to answer the intended question.
+Citations alone do not establish support. Unsupported claims combine
+contradicted and unsubstantiated claims for the aggregate while
+retaining the subtypes in raw ratings.
+
+Before adjudication, report agreement and Cohen's kappa where its
+denominator is defined. Preserve disagreements and claim-boundary
+decisions. Faithfulness is supported factual claims divided by all
+adjudicated factual claims, with annotation coverage stated. Zero-claim
+refusals have undefined claim faithfulness and do not count as perfect
+responses. Response-level hallucination is operationalized as at least
+one unsupported factual claim among adjudicated factual responses. The
+answerable-only dataset cannot support balanced abstention accuracy.
+These definitions are a protocol, not collected measurements.
+
+\hypertarget{results}{%
+\section{Results}\label{results}}
+
+Table~\ref{tab:1} and Figure~\ref{fig:retrieval} summarize the primary comparison. The fixed test sample contains 60 questions from 55 article groups. All
+nine systems (four primary systems and five ablations) completed three
+repetitions, producing 1,620 raw retrieval records. Query IDs match the
+frozen list; group disjointness and identical rankings across
+repetitions were checked. Index preparation required 158.07 seconds and
+is excluded from warm retrieval timing.
+
+\begin{table}[t]
+\centering
+\caption{Frozen primary retrieval comparison.}\label{tab:1}
+\small\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrr}
+\toprule
+Method & Recall@5 & MRR@5 & nDCG@5 & Mean (ms) \\
+\midrule
+B1 & 0.9500 & 0.9139 & 0.9232 & 17.49 \\
+B2 & 0.9667 & 0.9131 & 0.9263 & 25.10 \\
+B3 & 0.9833 & 0.9139 & 0.9314 & 1051.13 \\
+P1 & 0.9833 & 0.9028 & 0.9231 & 201.29 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{figure}[t]
+\centering\includegraphics[width=\columnwidth]{figures/retrieval.png}
+\caption{Retrieval quality and latency; logarithmic latency axis.}\label{fig:retrieval}
+\end{figure}
+
+
+P1 reduces observed mean retrieval time by 80.85\% relative to B3 and
+reranks 3.33 rather than 20 pairs per query (83.33\% fewer). Mean router
+overhead is 0.230 ms and is included. P1 routes 48 questions to dense,
+two to hybrid, and ten to reranking. Its nDCG difference against B3 is
+−0.00833 (article-cluster bootstrap 95\% interval {[}−0.02343,
+0.00000{]}); the retrieval-time difference is −0.84984 seconds
+{[}−0.94705, −0.74234{]}. P1 is approximately 11.51 times slower than B1
+and 8.02 times slower than B2. Its observed nDCG is lower than both,
+although Recall@5 is higher. Thus no primary method is universally best
+across the selected objectives.
+
+\begin{table}[t]
+\centering
+\caption{Removal of individual P1 components.}\label{tab:2}
+\small\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrr}
+\toprule
+Removed & Recall@5 & nDCG@5 & Mean (ms) \\
+\midrule
+Length & 0.9833 & 0.9231 & 174.39 \\
+Exact token & 0.9833 & 0.9231 & 193.41 \\
+Margin & 0.9500 & 0.9232 & 52.02 \\
+Hybrid & 0.9500 & 0.9068 & 195.63 \\
+Reranking & 0.9667 & 0.9399 & 19.25 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{figure}[t]
+\centering\includegraphics[width=\columnwidth]{figures/ablations.png}
+\caption{Change in nDCG after component removal; relevance judgments are non-exhaustive.}\label{fig:ablations}
+\end{figure}
+
+
+Table~\ref{tab:2} and Figure~\ref{fig:ablations} summarize the ablations. Removing reranking yields the highest observed nDCG among the tested
+configurations, while reducing recall relative to full P1. This is an
+exploratory ablation result, not a newly selected confirmatory policy.
+Length and exact-token removals do not change aggregate retrieval
+quality on this sample. The score-margin feature improves recall but
+does not establish an nDCG benefit.
+
+Data preparation retained 5,667 questions (3,360 development, 1,133
+validation, 1,174 test) and excluded 94 records for invalid/uncovered
+spans or duplicate questions. All corpus chunks are available as an
+open-book index; test query labels do not train or tune the router. The
+60-question test sample is a subset, not the entire held-out partition.
+
+All 240 matched generation responses completed. Strict exact match is
+0.0333 for B1, B2 and P1, and 0.0167 for B3. These low scores are not
+semantic correctness estimates because the metric penalizes explanatory
+text and citations. Estimated mean request latency is 42.275 seconds for
+B1, 41.758 for B2, 42.841 for B3 and 43.495 for P1. P1 therefore
+provides no observed overall latency saving; its paired difference from
+B3 is +0.6545 seconds {[}−0.5456, 1.8908{]}. P1 uses 1,940.22 input and
+60.82 output tokens per query, compared with B3's 1,917.45 and 54.58.
+Total generation usage is 461,175 input and 13,557 output tokens. API
+charges are zero because inference is local; this does not imply zero
+computational cost. Independent semantic correctness, faithfulness,
+unsupported-claim rate, hallucination rate and balanced abstention
+accuracy remain pending. Separately measured retrieval and generation
+durations provide an estimated request latency; direct full-request
+timing is reported below; electricity/hardware monetary cost remains
+unmeasured.
+
+\hypertarget{direct-end-to-end-latency-validation}{%
+\subsection{Direct end-to-end latency
+validation}\label{direct-end-to-end-latency-validation}}
+
+Table~\ref{tab:3} reports direct request timing. The integrated benchmark completed 240 requests on the same 60 frozen
+questions, with one request per method/question and balanced
+within-query execution positions. The reported interval starts before
+dense query encoding and ends after final answer decoding. No separate
+stage durations are added to obtain this measurement.
+
+\begin{table}[t]
+\centering
+\caption{Direct end-to-end request measurements.}\label{tab:3}
+\small\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrr}
+\toprule
+Method & Mean (s) & Median (s) & p95 (s) & SD (s) \\
+\midrule
+B1 & 41.765 & 41.839 & 53.509 & 7.312 \\
+B2 & 40.590 & 42.051 & 54.061 & 8.439 \\
+B3 & 42.141 & 43.027 & 52.882 & 7.370 \\
+P1 & 42.489 & 41.660 & 55.272 & 7.823 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+Mean latency 95\% article-cluster bootstrap intervals are B1 {[}39.911,
+43.494{]} seconds; B2 {[}38.481, 42.615{]} seconds; B3 {[}40.272,
+43.974{]} seconds; P1 {[}40.545, 44.450{]} seconds.
+
+P1 versus B3 has an observed direct mean latency reduction of -0.83\%
+(negative means slower). This comparison measures the complete warm
+request and should not be confused with the 80.85\% retrieval-only
+reduction.
+
+The P1-minus-B3 mean difference is 0.3477 seconds, with 95\% interval
+{[}-1.2076, 1.8974{]}. No formal significance or equivalence test is
+claimed.
+
+Rankings match the original run on 240/240 requests, and decoded answers
+match on 240/240 requests. Model revisions, thresholds, CPU thread
+count, prompt and generation budget remain fixed. The generator's
+recorded dtype is bfloat16 on CPU. The workstation was not isolated from
+other activity; the benchmark quantifies this session, not guaranteed
+production latency.
+
+Median and p95 intervals and all six pairwise comparisons are retained
+in the supplementary statistical output. The p95 is sensitive to a few
+observations and only one request was timed per query/method.
+
+\hypertarget{discussion}{%
+\section{Discussion}\label{discussion}}
+
+The observed policy saves work relative to always-reranking but is not
+competitive with the cheapest baselines on nDCG and latency jointly. Six
+queries incur positive regret under source-derived relevance labels:
+four choose reranking and two remain on dense retrieval. These are
+label-defined discrepancies, not six independently established semantic
+routing errors. Evidence inspection shows that the park query retrieves
+an unjudged first passage that explicitly contains the answer. The
+band-nationality query also omits the band name. Low score margin does
+not reliably identify improvement in the measured ranking metric, but
+incomplete judgments and question ambiguity constrain that
+interpretation. The no-reranking ablation reinforces this conclusion.
+Because relevance is non-exhaustive, these ranking failures should also
+be inspected against full passage text.
+
+Qualitative inspection identifies generation errors despite available
+evidence: one answer gives the English name of Aphrodite when the
+question asks for her Roman name, although the retrieved passage
+explicitly gives Venus. Another supplies an unsupported death year.
+These assistant-reviewed cases are not independent human annotations and
+do not estimate hallucination rates. Long evidence identifiers can
+consume the fixed generation budget, and strict exact match penalizes
+otherwise relevant explanatory answers. Neither prompt nor router is
+retuned after examining these test outcomes.
+
+The defensible contribution is a reproducible, overhead-inclusive Thai
+comparison showing where a transparent three-way policy does and does
+not offer value. Learned routing is not yet justified: this small sample
+provides error hypotheses, not evidence of generalizable predictability.
+Calibration or learning should proceed only on development/validation
+data, with any new claims evaluated on untouched questions. \#\#\#
+Mechanism-level error analysis
+
+Among ten C-route questions, removing reranking improves nDCG on four,
+reduces it on one and leaves it unchanged on five. The other 50
+questions retain their original action and ranking. The four gains are
+0.369070 for the regional fish name, 0.130930 for the abbreviated
+Tolkien death question, 0.369070 for park type and 0.569323 for band
+nationality. One director question loses 0.430677 because reranking had
+recovered the labeled passage at rank four while hybrid missed the top
+five. Dividing their net change by 60 yields the observed increase of
+0.016795. The one lost hit explains the recall decrease of 1/60.
+
+The fish example is an answer-localization failure: the reranker
+promotes the article's general species description over its later
+regional-name sentence. The Tolkien example combines an abbreviated
+entity with competing death-related passages, so semantic topical
+similarity does not ensure the correct subject. The docusate query is a
+missed reranking opportunity under the labels: the dense margin is
+relatively large, but the answer-bearing secondary use is ranked below
+the general introduction. The Diana concert query promotes a similar
+sentence about another performance within the same article; the
+exact-token proxy does not recognize a Thai personal name as an entity
+feature.
+
+The park example changes how the aggregate must be interpreted. Its
+first reranked passage explicitly contains the requested park
+classification, but the qrel identifies a different source chunk. Thus
+an apparent nDCG loss can coexist with adequate evidence. The band
+question lacks the band's name, and the director question similarly
+omits the work being directed. These source-context-dependent questions
+are weak standalone retrieval tests. We preserve their scores and
+disclose the problem rather than remove unfavorable examples after
+seeing results.
+
+\hypertarget{retrieval-savings-and-complete-request-cost}{%
+\subsection{Retrieval savings and complete-request
+cost}\label{retrieval-savings-and-complete-request-cost}}
+
+A reduction in cross-encoder calls can be large relative to retrieval
+time while small relative to generation. Furthermore, different evidence
+changes prompt length and output length even when the number of passages
+is fixed. The original generation run uses more input and output tokens
+for P1 than for B3 on average. Adding separate measurements suggested no
+overall saving, but that estimate is not a substitute for a complete
+timed request. The integrated benchmark is designed to distinguish these
+quantities under the same policy, model and evidence budget.
+
+The system-level objective should therefore be explicit. If the priority
+is recovering a source-labeled passage while avoiding always-reranking,
+the observed P1 recall/time tradeoff may be useful. If the priority is
+maximizing nDCG at minimal latency, dense, hybrid or the no-reranking
+ablation can be preferable in this sample. If the objective is reliable
+generated answers, neither comparison is decisive without grounded
+answer judgments. A contribution that states these boundaries is more
+defensible than selecting whichever metric makes the proposed system
+look strongest.
+
+\hypertarget{development-only-next-steps}{%
+\subsection{Development-only next
+steps}\label{development-only-next-steps}}
+
+Future work should first improve evaluation validity through pooled
+judgments and standalone-question assessment on development data. It may
+then estimate the incremental quality benefit of reranking, conditioned
+on observable query and retrieval features, under an explicit cost
+budget. A calibrated decision tree or other lightweight model would be
+justified only by out-of-group development/validation performance and
+sufficient labeled decision variation. The six test diagnostics are not
+a training set for a new policy. Any new thresholds, entity features,
+prompt format or learned router must be frozen before evaluation on a
+new untouched sample.
+
+\hypertarget{limitations}{%
+\section{Limitations}\label{limitations}}
+
+The current evidence labels are derived from answer spans and are not
+exhaustive relevance judgments. Overlapping chunks can inflate the
+number of relevant items. Character windows may split Thai words.
+Wikipedia factoid QA does not represent all Thai information needs.
+Model pretraining may include benchmark content. Heuristic features
+require calibration and may not transfer. Human grounding evaluation,
+residual near-duplicate sensitivity analysis and full literature detail
+verification remain incomplete. Three retrieval repetitions quantify
+within-session variability, but do not establish cross-machine or
+cross-session latency stability. The small held-out sample and 55
+article groups limit precision. The small initial generator may be
+inadequate for Thai. Generation was run once per query/system; five
+responses resumed after an interruption, and session drift may affect
+timing. Long evidence IDs and the output cap can also impair answer
+formatting. Official conference pages disagree on the submission
+deadline and page limits; final formatting requires reconciliation.
+
+\hypertarget{threats-to-validity-and-reproducibility-boundaries}{%
+\subsection{Threats to validity and reproducibility
+boundaries}\label{threats-to-validity-and-reproducibility-boundaries}}
+
+Construct validity is limited by source-span relevance, strict answer
+matching and the use of length as a complexity proxy. The park case
+shows that derived qrels can penalize a passage that answers the
+question. Exhaustive judgments are unavailable, so retrieval scores
+measure recovery of labeled source evidence rather than all acceptable
+evidence. Exact match can reject correct explanatory responses and
+should not be presented as semantic accuracy. Conversely, a matching
+reference substring would not prove that all generated claims are
+supported.
+
+Internal validity depends on preserving common models, candidate
+budgets, prompt instructions and query sets. Fixed revisions and output
+hashes make silent changes detectable. Randomized or balanced execution
+order reduces some order effects, but this is a workstation experiment
+rather than an isolated serving environment. Background load, CPU
+frequency, thermal conditions and memory residency can influence
+latency. One integrated request per method/query and three retrieval
+repetitions do not establish robustness across days, concurrent
+workloads or deployment stacks. Confidence intervals quantify the
+resampling variability in this sample, not every source of measurement
+error.
+
+External validity is restricted to Thai Wikipedia-derived questions, a
+small local generator, the selected multilingual retriever/reranker and
+CPU hardware. Domain terminology, multi-hop reasoning, long documents
+and user-authored queries may behave differently. The derived test
+sample contains no independently validated unanswerable subset. The same
+public text may have appeared during model pretraining; hash-based
+research splits do not resolve that contamination. Results should not be
+generalized to all Thai RAG systems or interpreted as evidence that a
+particular architecture is unsuitable for other applications.
+
+Conclusion validity is limited by the small sample, dependent article
+questions, exploratory ablations and unavailable independent answer
+judgments. The highest observed ablation score is not an independently
+validated new method, because it was identified after test access. We
+report effect sizes and intervals rather than a favorable binary
+significance narrative. The correct inference from missing faithfulness
+annotations is that reliability remains unestablished. Negative results
+and measurement limitations remain part of the record even if future
+policies improve.
+
+The reproducibility package stores the source-data revision and hash,
+model revisions and weight checks, frozen query IDs, configuration
+files, raw rankings and answers, per-request timings, token counts,
+environment locks and analysis scripts. Existing held-out artifacts are
+hashed before follow-up work and are not overwritten. Blinded annotation
+templates contain no judgments, and mapping files are separated from
+rater material. Model licenses, corpus attribution and contributor-data
+minimization must be respected when sharing the package; source
+payment/contributor fields are not used in processed experimental
+records.
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+The frozen policy reduces retrieval latency relative to always-reranking
+while matching observed Recall@5, but loses nDCG and remains
+substantially slower than dense or hybrid retrieval. Removing reranking
+produces a stronger observed nDCG/latency tradeoff, revealing a weakness
+in the current decision mechanism. These results support a bounded
+empirical contribution and an honest negative finding about the policy,
+rather than a claim that adaptive routing is generally superior. Direct
+request timing shows no observed mean latency saving for P1 against any
+primary baseline; its difference from B3 has a bootstrap interval
+spanning zero. Reliability and semantic-answer conclusions await
+independent annotation.
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+\end{document}

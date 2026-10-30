@@ -1,0 +1,83 @@
+[
+  {
+    "comparison": "P1:none - B1",
+    "metric": "ndcg",
+    "mean_delta": 0.06897744806422024,
+    "ci95": [
+      0.0,
+      0.1615736544215044
+    ]
+  },
+  {
+    "comparison": "P1:none - B1",
+    "metric": "recall",
+    "mean_delta": 0.03333333333333333,
+    "ci95": [
+      0.0,
+      0.10344827586206896
+    ]
+  },
+  {
+    "comparison": "P1:none - B1",
+    "metric": "retrieval_seconds",
+    "mean_delta": 0.3506357694666728,
+    "ci95": [
+      0.14083603142232617,
+      0.6003765029922697
+    ]
+  },
+  {
+    "comparison": "P1:none - B2",
+    "metric": "ndcg",
+    "mean_delta": 0.024604683095236165,
+    "ci95": [
+      0.0,
+      0.06363280110836939
+    ]
+  },
+  {
+    "comparison": "P1:none - B2",
+    "metric": "recall",
+    "mean_delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "comparison": "P1:none - B2",
+    "metric": "retrieval_seconds",
+    "mean_delta": 0.34083391630000126,
+    "ci95": [
+      0.13186639099394326,
+      0.5904952448033293
+    ]
+  },
+  {
+    "comparison": "P1:none - B3",
+    "metric": "ndcg",
+    "mean_delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "comparison": "P1:none - B3",
+    "metric": "recall",
+    "mean_delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "comparison": "P1:none - B3",
+    "metric": "retrieval_seconds",
+    "mean_delta": -0.8175011041666721,
+    "ci95": [
+      -1.0703391495649293,
+      -0.539124590725916
+    ]
+  }
+]

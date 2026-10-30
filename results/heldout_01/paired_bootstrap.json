@@ -1,0 +1,83 @@
+[
+  {
+    "comparison": "P1:none - B1",
+    "metric": "ndcg",
+    "mean_delta": -0.0001286188380292717,
+    "ci95": [
+      -0.03243518031061509,
+      0.0300895104333311
+    ]
+  },
+  {
+    "comparison": "P1:none - B1",
+    "metric": "recall",
+    "mean_delta": 0.03333333333333333,
+    "ci95": [
+      0.0,
+      0.08333333333333333
+    ]
+  },
+  {
+    "comparison": "P1:none - B1",
+    "metric": "retrieval_seconds",
+    "mean_delta": 0.18379547797776216,
+    "ci95": [
+      0.0862913214528263,
+      0.2903058621966693
+    ]
+  },
+  {
+    "comparison": "P1:none - B2",
+    "metric": "ndcg",
+    "mean_delta": -0.0032386123669705578,
+    "ci95": [
+      -0.04428906005910197,
+      0.04121217955197717
+    ]
+  },
+  {
+    "comparison": "P1:none - B2",
+    "metric": "recall",
+    "mean_delta": 0.016666666666666666,
+    "ci95": [
+      0.0,
+      0.05172413793103448
+    ]
+  },
+  {
+    "comparison": "P1:none - B2",
+    "metric": "retrieval_seconds",
+    "mean_delta": 0.17618579369443774,
+    "ci95": [
+      0.07898794957724703,
+      0.2823663327640776
+    ]
+  },
+  {
+    "comparison": "P1:none - B3",
+    "metric": "ndcg",
+    "mean_delta": -0.008333333333333333,
+    "ci95": [
+      -0.023433143231290726,
+      0.0
+    ]
+  },
+  {
+    "comparison": "P1:none - B3",
+    "metric": "recall",
+    "mean_delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "comparison": "P1:none - B3",
+    "metric": "retrieval_seconds",
+    "mean_delta": -0.849844910066679,
+    "ci95": [
+      -0.9470451210926094,
+      -0.7423371452971437
+    ]
+  }
+]

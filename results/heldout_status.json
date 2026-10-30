@@ -1,0 +1,10 @@
+{
+  "state": "automatic_experiments_complete",
+  "retrieval_rows": 1620,
+  "generation_rows": 240,
+  "test_queries": 60,
+  "faithfulness": "pending independent annotation (0/240)",
+  "human_correctness": "pending independent annotation",
+  "direct_end_to_end_timing": "not measured; separately measured segments summed",
+  "report": "results/heldout_01/experiment_report.md"
+}

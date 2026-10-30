@@ -1,0 +1,236 @@
+[
+  {
+    "query_id": "pd11BG3XWHgkXr4cC28r_004",
+    "question": "ระยะเวลาในการครองราชย์คือเมื่อใด",
+    "answers": [
+      "ระหว่างปี 1591-1611"
+    ],
+    "features": {
+      "length": 5,
+      "exact": false,
+      "margin": 0.010788559913635254
+    },
+    "strategy": "C",
+    "full_ndcg": 0.0,
+    "no_reranking_ndcg": 0.0,
+    "ndcg_delta_without_reranking": 0.0,
+    "full_recall": 0.0,
+    "no_reranking_recall": 0.0,
+    "relevant_ranks_full": [],
+    "relevant_ranks_without_reranking": []
+  },
+  {
+    "query_id": "ICQ054THVjycHK3DNNt0_003",
+    "question": "ปลาใบไม้ในภาษาอีสานเรียกว่าปลาชนิดนี้ว่าอะไร",
+    "answers": [
+      "เป"
+    ],
+    "features": {
+      "length": 12,
+      "exact": false,
+      "margin": 0.017958104610443115
+    },
+    "strategy": "C",
+    "full_ndcg": 0.6309297535714575,
+    "no_reranking_ndcg": 1.0,
+    "ndcg_delta_without_reranking": 0.36907024642854247,
+    "full_recall": 1.0,
+    "no_reranking_recall": 1.0,
+    "relevant_ranks_full": [
+      2
+    ],
+    "relevant_ranks_without_reranking": [
+      1
+    ]
+  },
+  {
+    "query_id": "vrMwo56XajptJAiH2Br0_004",
+    "question": "เจ. อาร์. อาร์. เสียชีวิตเมื่อไร",
+    "answers": [
+      "ค.ศ. 1973"
+    ],
+    "features": {
+      "length": 8,
+      "exact": false,
+      "margin": 0.013211607933044434
+    },
+    "strategy": "C",
+    "full_ndcg": 0.5,
+    "no_reranking_ndcg": 0.6309297535714575,
+    "ndcg_delta_without_reranking": 0.13092975357145753,
+    "full_recall": 1.0,
+    "no_reranking_recall": 1.0,
+    "relevant_ranks_full": [
+      3
+    ],
+    "relevant_ranks_without_reranking": [
+      2
+    ]
+  },
+  {
+    "query_id": "4NiEdXWjlPAZ0EVhI8qk_001",
+    "question": "กำกับการแสดงโดยใคร",
+    "answers": [
+      "ปิยะพงษ์ คำภากุล"
+    ],
+    "features": {
+      "length": 4,
+      "exact": false,
+      "margin": 0.003647923469543457
+    },
+    "strategy": "C",
+    "full_ndcg": 0.43067655807339306,
+    "no_reranking_ndcg": 0.0,
+    "ndcg_delta_without_reranking": -0.43067655807339306,
+    "full_recall": 1.0,
+    "no_reranking_recall": 0.0,
+    "relevant_ranks_full": [
+      4
+    ],
+    "relevant_ranks_without_reranking": []
+  },
+  {
+    "query_id": "x4fSbfJrXClYXpMMSwja_002",
+    "question": "สวนเบญจสิริเป็นสวนสาธารณะประเภทใด",
+    "answers": [
+      "สวนสาธารณะระดับชุมชนขนาดเล็ก"
+    ],
+    "features": {
+      "length": 7,
+      "exact": false,
+      "margin": 0.0005936622619628906
+    },
+    "strategy": "C",
+    "full_ndcg": 0.6309297535714575,
+    "no_reranking_ndcg": 1.0,
+    "ndcg_delta_without_reranking": 0.36907024642854247,
+    "full_recall": 1.0,
+    "no_reranking_recall": 1.0,
+    "relevant_ranks_full": [
+      2
+    ],
+    "relevant_ranks_without_reranking": [
+      1
+    ]
+  },
+  {
+    "query_id": "oUNCj0S0anI3YTYCKL3X_000",
+    "question": "วงดนตรีสัญชาติอะไร",
+    "answers": [
+      "สัญชาติไทย"
+    ],
+    "features": {
+      "length": 3,
+      "exact": false,
+      "margin": 0.0042760372161865234
+    },
+    "strategy": "C",
+    "full_ndcg": 0.43067655807339306,
+    "no_reranking_ndcg": 1.0,
+    "ndcg_delta_without_reranking": 0.5693234419266069,
+    "full_recall": 1.0,
+    "no_reranking_recall": 1.0,
+    "relevant_ranks_full": [
+      4
+    ],
+    "relevant_ranks_without_reranking": [
+      1
+    ]
+  },
+  {
+    "query_id": "oXrs9l1x3KkS1JamEG8r_003",
+    "question": "ไม่นานให้หลัง อั้งเฮียะไต้ซือ ก่อนมรณภาพ ได้เรียกตัวศิษย์ทั้งหมดเข้าพบ บอกต้นสายปลายเหตุของคัมภีร์ทานตะวัน ฉบับสมบูรณ์ เล่มนี้ จากนั้นได้ทำอะไรกับคัมภีร์ ?",
+    "answers": [
+      "โยนคัมภีร์เข้าเตาไฟทำลายทิ้ง"
+    ],
+    "features": {
+      "length": 29,
+      "exact": false,
+      "margin": 0.03024369478225708
+    },
+    "strategy": "C",
+    "full_ndcg": 1.0,
+    "no_reranking_ndcg": 1.0,
+    "ndcg_delta_without_reranking": 0.0,
+    "full_recall": 1.0,
+    "no_reranking_recall": 1.0,
+    "relevant_ranks_full": [
+      1
+    ],
+    "relevant_ranks_without_reranking": [
+      1
+    ]
+  },
+  {
+    "query_id": "2djM0NUTRqhJJE1Unv0A_003",
+    "question": "รูปลักษณ์ของเอโลวีน?",
+    "answers": [
+      "เป็นสตรีที่มีร่างสูงโปร่ง ผมสีทอง มีใบหน้างดงาม"
+    ],
+    "features": {
+      "length": 6,
+      "exact": false,
+      "margin": 0.008965671062469482
+    },
+    "strategy": "C",
+    "full_ndcg": 1.0,
+    "no_reranking_ndcg": 1.0,
+    "ndcg_delta_without_reranking": 0.0,
+    "full_recall": 1.0,
+    "no_reranking_recall": 1.0,
+    "relevant_ranks_full": [
+      1
+    ],
+    "relevant_ranks_without_reranking": [
+      1
+    ]
+  },
+  {
+    "query_id": "VXb7aXrC8c22spNEKyfZ_000",
+    "question": "ธนญชัย ศรศรีวิชัยได้รับรางวัลอะไรที่ทำให้มีชื่อเสียง",
+    "answers": [
+      "Gold Lions"
+    ],
+    "features": {
+      "length": 9,
+      "exact": false,
+      "margin": 0.01510632038116455
+    },
+    "strategy": "C",
+    "full_ndcg": 1.0,
+    "no_reranking_ndcg": 1.0,
+    "ndcg_delta_without_reranking": 0.0,
+    "full_recall": 1.0,
+    "no_reranking_recall": 1.0,
+    "relevant_ranks_full": [
+      1
+    ],
+    "relevant_ranks_without_reranking": [
+      1
+    ]
+  },
+  {
+    "query_id": "jm7zFEBvP6SDKBBksEcL_003",
+    "question": "ปาโก เฆนโต เป็นชาวประเทศอะไร",
+    "answers": [
+      "สเปน"
+    ],
+    "features": {
+      "length": 8,
+      "exact": false,
+      "margin": 0.018521547317504883
+    },
+    "strategy": "C",
+    "full_ndcg": 1.0,
+    "no_reranking_ndcg": 1.0,
+    "ndcg_delta_without_reranking": 0.0,
+    "full_recall": 1.0,
+    "no_reranking_recall": 1.0,
+    "relevant_ranks_full": [
+      1
+    ],
+    "relevant_ranks_without_reranking": [
+      1
+    ]
+  }
+]
