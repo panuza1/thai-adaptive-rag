@@ -43,6 +43,7 @@ def build_retriever(cfg,docs):
             ranked=rrf([dense,sparse])[:cfg['candidate_k']]
         pairs=0
         if strategy=='C':
+            ranked=ranked[:cfg.get('rerank_k',cfg['candidate_k'])]
             pairs=len(ranked)
             values=reranker.predict([(query,docs[i]['text']) for i in ranked],batch_size=16,show_progress_bar=False)
             ranked=[ranked[i] for i in np.argsort(-np.asarray(values).reshape(-1),kind='stable')]
@@ -56,8 +57,8 @@ def main(config_path, output):
     cfg=json.loads(Path(config_path).read_text()); out=Path(output); out.mkdir(parents=True,exist_ok=False)
     data_dir=Path(cfg.get('data_dir','data/processed'))
     source_hashes={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in Path('src').glob('*.py')}
-    if not (cfg['candidate_k'] >= cfg['k'] > 0 and cfg['repeats'] > 0):
-        raise ValueError('Require candidate_k >= k > 0 and repeats > 0')
+    if not (cfg['candidate_k'] >= cfg.get('rerank_k',cfg['candidate_k']) >= cfg['k'] > 0 and cfg['repeats'] > 0):
+        raise ValueError('Require candidate_k >= rerank_k >= k > 0 and repeats > 0')
     random.seed(cfg['seed']); np.random.seed(cfg['seed']); torch.manual_seed(cfg['seed']); torch.set_num_threads(cfg['threads'])
     docs=[json.loads(s) for s in (data_dir/'documents.jsonl').read_text().splitlines()]
     queries=[json.loads(s) for s in (data_dir/'queries.jsonl').read_text().splitlines()]
