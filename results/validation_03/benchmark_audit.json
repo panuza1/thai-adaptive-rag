@@ -1,0 +1,292 @@
+{
+  "queries": 60,
+  "article_groups": 55,
+  "corpus_chunks": 3223,
+  "validated_primary_rows": 720,
+  "gold_chunks_per_query": {
+    "1": 60
+  },
+  "recall_at_5_is_binary_on_this_sample": true,
+  "recall_failures_by_system": {
+    "B1": 3,
+    "B2": 2,
+    "B3": 1,
+    "P1:none": 1
+  },
+  "shared_recall_failures": 1,
+  "mean_ndcg": {
+    "B1": 0.9232131543452395,
+    "B2": 0.9263231478741808,
+    "B3": 0.9314178688405437,
+    "P1:none": 0.9230845355072103
+  },
+  "oracle": {
+    "best_static_per_query_ndcg": 0.9553910969797961,
+    "best_static_per_query_recall": 0.9833333333333333,
+    "cheapest_static_at_or_above_b3_quality_ms": 50.71943939444863,
+    "b3_retrieval_ms": 1051.1336600222246,
+    "cheapest_static_selection_counts": {
+      "B1": 56,
+      "B3": 2,
+      "B2": 2
+    }
+  },
+  "diagnostic_cases": [
+    {
+      "query_id": "B4M37Q5xCcVGgB4IF5IV_002",
+      "gold_chunks": 1,
+      "missed_by": [],
+      "quality_oracle_ndcg": 0.6309297535714575,
+      "quality_oracle_recall": 1.0,
+      "cheapest_at_b3_quality": "B3",
+      "scores": {
+        "B1": {
+          "recall": 1.0,
+          "ndcg": 0.5,
+          "retrieval_seconds": 0.0197517040000245
+        },
+        "B2": {
+          "recall": 1.0,
+          "ndcg": 0.43067655807339306,
+          "retrieval_seconds": 0.030889914333329216
+        },
+        "B3": {
+          "recall": 1.0,
+          "ndcg": 0.6309297535714575,
+          "retrieval_seconds": 1.138826014000036
+        },
+        "P1:none": {
+          "recall": 1.0,
+          "ndcg": 0.5,
+          "retrieval_seconds": 0.019930330666663092
+        }
+      }
+    },
+    {
+      "query_id": "pd11BG3XWHgkXr4cC28r_004",
+      "gold_chunks": 1,
+      "missed_by": [
+        "B1",
+        "B2",
+        "B3",
+        "P1:none"
+      ],
+      "quality_oracle_ndcg": 0.0,
+      "quality_oracle_recall": 0.0,
+      "cheapest_at_b3_quality": "B1",
+      "scores": {
+        "B1": {
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "retrieval_seconds": 0.015300566000026569
+        },
+        "B2": {
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "retrieval_seconds": 0.0221947600001234
+        },
+        "B3": {
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "retrieval_seconds": 0.9689684096666346
+        },
+        "P1:none": {
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "retrieval_seconds": 1.1519663906666817
+        }
+      }
+    },
+    {
+      "query_id": "ICQ054THVjycHK3DNNt0_003",
+      "gold_chunks": 1,
+      "missed_by": [],
+      "quality_oracle_ndcg": 1.0,
+      "quality_oracle_recall": 1.0,
+      "cheapest_at_b3_quality": "B1",
+      "scores": {
+        "B1": {
+          "recall": 1.0,
+          "ndcg": 0.6309297535714575,
+          "retrieval_seconds": 0.020139402333370526
+        },
+        "B2": {
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "retrieval_seconds": 0.031616354000107094
+        },
+        "B3": {
+          "recall": 1.0,
+          "ndcg": 0.6309297535714575,
+          "retrieval_seconds": 1.0093610293333768
+        },
+        "P1:none": {
+          "recall": 1.0,
+          "ndcg": 0.6309297535714575,
+          "retrieval_seconds": 1.0139620603333697
+        }
+      }
+    },
+    {
+      "query_id": "vrMwo56XajptJAiH2Br0_004",
+      "gold_chunks": 1,
+      "missed_by": [
+        "B1"
+      ],
+      "quality_oracle_ndcg": 0.6309297535714575,
+      "quality_oracle_recall": 1.0,
+      "cheapest_at_b3_quality": "B2",
+      "scores": {
+        "B1": {
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "retrieval_seconds": 0.01617460533338999
+        },
+        "B2": {
+          "recall": 1.0,
+          "ndcg": 0.6309297535714575,
+          "retrieval_seconds": 0.02123742100002346
+        },
+        "B3": {
+          "recall": 1.0,
+          "ndcg": 0.5,
+          "retrieval_seconds": 1.3103698843332647
+        },
+        "P1:none": {
+          "recall": 1.0,
+          "ndcg": 0.5,
+          "retrieval_seconds": 1.1457936393333057
+        }
+      }
+    },
+    {
+      "query_id": "4NiEdXWjlPAZ0EVhI8qk_001",
+      "gold_chunks": 1,
+      "missed_by": [
+        "B1",
+        "B2"
+      ],
+      "quality_oracle_ndcg": 0.43067655807339306,
+      "quality_oracle_recall": 1.0,
+      "cheapest_at_b3_quality": "B3",
+      "scores": {
+        "B1": {
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "retrieval_seconds": 0.013275920333398972
+        },
+        "B2": {
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "retrieval_seconds": 0.016151010666741666
+        },
+        "B3": {
+          "recall": 1.0,
+          "ndcg": 0.43067655807339306,
+          "retrieval_seconds": 0.8717949053333692
+        },
+        "P1:none": {
+          "recall": 1.0,
+          "ndcg": 0.43067655807339306,
+          "retrieval_seconds": 0.7617487323334444
+        }
+      }
+    },
+    {
+      "query_id": "x4fSbfJrXClYXpMMSwja_002",
+      "gold_chunks": 1,
+      "missed_by": [],
+      "quality_oracle_ndcg": 1.0,
+      "quality_oracle_recall": 1.0,
+      "cheapest_at_b3_quality": "B1",
+      "scores": {
+        "B1": {
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "retrieval_seconds": 0.017936470333400695
+        },
+        "B2": {
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "retrieval_seconds": 0.022297945666650776
+        },
+        "B3": {
+          "recall": 1.0,
+          "ndcg": 0.6309297535714575,
+          "retrieval_seconds": 1.0720246143333345
+        },
+        "P1:none": {
+          "recall": 1.0,
+          "ndcg": 0.6309297535714575,
+          "retrieval_seconds": 0.8714836813333781
+        }
+      }
+    },
+    {
+      "query_id": "zcQWGlRuU1bLyQEaW2Ea_004",
+      "gold_chunks": 1,
+      "missed_by": [],
+      "quality_oracle_ndcg": 1.0,
+      "quality_oracle_recall": 1.0,
+      "cheapest_at_b3_quality": "B2",
+      "scores": {
+        "B1": {
+          "recall": 1.0,
+          "ndcg": 0.6309297535714575,
+          "retrieval_seconds": 0.01677458000002237
+        },
+        "B2": {
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "retrieval_seconds": 0.02768851433332505
+        },
+        "B3": {
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "retrieval_seconds": 1.2066321550000036
+        },
+        "P1:none": {
+          "recall": 1.0,
+          "ndcg": 0.6309297535714575,
+          "retrieval_seconds": 0.01796676933334614
+        }
+      }
+    },
+    {
+      "query_id": "oUNCj0S0anI3YTYCKL3X_000",
+      "gold_chunks": 1,
+      "missed_by": [],
+      "quality_oracle_ndcg": 1.0,
+      "quality_oracle_recall": 1.0,
+      "cheapest_at_b3_quality": "B1",
+      "scores": {
+        "B1": {
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "retrieval_seconds": 0.020201343333383193
+        },
+        "B2": {
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "retrieval_seconds": 0.02242852800001553
+        },
+        "B3": {
+          "recall": 1.0,
+          "ndcg": 0.43067655807339306,
+          "retrieval_seconds": 1.2671617460000562
+        },
+        "P1:none": {
+          "recall": 1.0,
+          "ndcg": 0.43067655807339306,
+          "retrieval_seconds": 1.2748094916666257
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Gold relevance is derived from answer spans, not exhaustive passage judgments.",
+    "All oracle choices use observed test labels and are hindsight diagnostics, not deployable policies.",
+    "Observed retrieval timings are one CPU session, not production cost estimates.",
+    "These test-set diagnostics must not be used to tune the existing frozen test run."
+  ]
+}
